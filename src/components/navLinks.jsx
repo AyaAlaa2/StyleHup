@@ -35,7 +35,7 @@ export const socialLinks = [
     href: "https://instagram.com",
   },
   {
-    icon: <PiFacebookLogoLight className="text-[30px]" />,
+    icon: <PiFacebookLogoLight className="text-[26px]" />,
     href: "https://facebook.com",
   },
 ];

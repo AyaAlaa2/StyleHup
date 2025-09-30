@@ -4,7 +4,7 @@ import { navLinks, socialLinks } from "./navLinks";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-6 justify-center items-start md:items-center text-[#757575] py-[40px] px-[50px] md:px-[0px]">
+    <footer className="flex flex-col gap-6 justify-center items-start md:items-center text-[#757575] px-[20px] py-[40px]">
       <ul className="container flex flex-col md:flex-row gap-[30px] capitalize text-[16px] font-normal justify-around items-start">
         {navLinks.map((link, idx) => (
           <li
@@ -15,7 +15,7 @@ const Footer = () => {
           </li>
         ))}
       </ul>
-      <div className="flex flex-row gap-[20px] text-[24px] items-center justify-center font-bold">
+      <div className="flex flex-row gap-[20px] text-[20px] items-center justify-center font-bold">
         {socialLinks.map((link, idx) => (
           <Link to={link.href} key={idx} target="_blank">
             {link.icon}
