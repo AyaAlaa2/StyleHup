@@ -2,6 +2,15 @@ import React from "react";
 import { PiFacebookLogoLight } from "react-icons/pi";
 import { SlSocialInstagram, SlSocialTwitter } from "react-icons/sl";
 
+export const headerLinks = [
+  { title: "Home", path: "/" },
+  { title: "Shop", path: "/Shop" },
+  { title: "New Arrivals", path: "/New" },
+  { title: "Sale", path: "/Sale" },
+  { title: "Blog", path: "/Blog" },
+  { title: "Contact", path: "/Contact" },
+];
+
 export const navLinks = [
   {
     title: "About Us",
