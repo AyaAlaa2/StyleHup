@@ -7,11 +7,10 @@ import {
   bestSellersProduct,
   curatedProduct,
 } from "./homeProducts";
-import Footer from "../Footer";
 
 const Home = () => {
   return (
-    <div className="pb-[20px]">
+    <div className="py-[20px]">
       <Hero />
       <HomeComponent title="new arrival" products={newArrivalProduct} />
       <HomeComponent title="best sellers" products={bestSellersProduct} />
