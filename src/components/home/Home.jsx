@@ -10,7 +10,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="py-[20px]">
+    <div>
       <Hero />
       <HomeComponent title="new arrival" products={newArrivalProduct} />
       <HomeComponent title="best sellers" products={bestSellersProduct} />
