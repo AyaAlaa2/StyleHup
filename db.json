@@ -1,0 +1,2922 @@
+{
+ "Products":[
+  {
+    "id": 1,
+    "name": "Brown Lens Sunglasses",
+    "description": "Stylish sunglasses with brown lenses that provide UV protection and a modern design suitable for both casual and formal looks.",
+    "price": 250,
+    "size": [
+      "One Size"
+    ],
+    "material": "High-quality plastic frame with UV lenses",
+    "category": "Accessories",
+    "color": [
+      "Black",
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877951/image_146_cko6ho.png"
+  },
+  {
+    "id": 2,
+    "name": "Black Lens Sunglasses",
+    "description": "Elegant black-lens sunglasses providing full UV protection with a modern and versatile design suitable for casual and formal occasions.",
+    "price": 260,
+    "size": [
+      "One Size"
+    ],
+    "material": "High-quality plastic frame with UV lenses",
+    "category": "Accessories",
+    "color": [
+      "Black",
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4,
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877950/image_147_g6z2o6.png"
+  },
+  {
+    "id": 3,
+    "name": "Kids Winter Sweater",
+    "description": "Cozy winter sweater for kids in blue and orange colors, made with soft fabric to keep your child warm and comfortable during cold days.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Kids",
+    "color": [
+      "Blue",
+      "Orange"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876933/image_8_xpammd.png",
+    "careInstructions": "Machine wash cold with like colors."
+  },
+  {
+    "id": 4,
+    "name": "Striped Crop Top for Women",
+    "description": "Chic and trendy striped crop top for women, featuring a classic black and white pattern, perfect for casual outings or layering.",
+    "price": 120,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Striped"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876936/image_6_l5xl9y.png"
+  },
+  {
+    "id": 5,
+    "name": "Kids Orange Winter Sweater",
+    "description": "Warm and cozy orange winter sweater for kids, designed to keep your little one comfortable during chilly days.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Kids",
+    "color": [
+      "Orange"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876937/image_2_xwnok3.png"
+  },
+  {
+    "id": 6,
+    "name": "Kids Grey Summer T-Shirt",
+    "description": "Lightweight grey short-sleeve t-shirt for kids, perfect for keeping your child cool and comfortable during the summer.",
+    "price": 100,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Soft cotton",
+    "category": "Kids",
+    "color": [
+      "Gray"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.3,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876941/image_3_xjuyg1.png"
+  },
+  {
+    "id": 7,
+    "name": "Kids Brown Overalls",
+    "description": "Cute brown overalls for kids with decorative stitching on the shoulders, comfortable and stylish for everyday wear.",
+    "price": 220,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Kids",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876946/image_1_utrwwh.png"
+  },
+  {
+    "id": 8,
+    "name": "Youth Summer T-Shirt",
+    "description": "Lightweight short-sleeve cotton t-shirt, perfect for staying cool and comfortable during the summer.",
+    "price": 130,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton",
+    "category": "Men",
+    "color": [
+      "Blue",
+      "Black",
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876969/image_10_dnwolb.png"
+  },
+  {
+    "id": 9,
+    "name": "Kids Boys Overalls",
+    "description": "Cute and comfortable brown overalls for boys, perfect for everyday wear and playtime.",
+    "price": 220,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Kids",
+    "color": [
+      "Denim Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876972/image_7_ltgzxo.png"
+  },
+  {
+    "id": 10,
+    "name": "Kids Brown Winter Pajamas",
+    "description": "Soft and cozy brown winter pajamas for kids, perfect for keeping warm during the colder months.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton blend",
+    "category": "Kids",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758876979/image_4_hgbo2o.png"
+  },
+  {
+    "id": 11,
+    "name": "Kids Denim Jacket and Pants Set",
+    "description": "Stylish denim jacket and matching pants set for boys, perfect for casual outings and everyday wear.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Denim cotton",
+    "category": "Kids",
+    "color": [
+      "Denim Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877156/image_11_dayzgf.png"
+  },
+  {
+    "id": 12,
+    "name": "Women's Blue Denim Jeans",
+    "description": "Classic blue denim jeans for women, offering a comfortable fit and timeless style.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877158/image_15_snlz6x.png"
+  },
+  {
+    "id": 13,
+    "name": "Kids Striped Summer Set",
+    "description": "Comfortable and stylish summer set for kids, featuring a striped cotton t-shirt and matching shorts, perfect for warm weather outings.",
+    "price": 120,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton",
+    "category": "Kids",
+    "color": [
+      "White",
+      "Gray"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877158/image_16_nkadxo.png"
+  },
+  {
+    "id": 14,
+    "name": "Youth Turtleneck Sweater",
+    "description": "Cozy and stylish turtleneck sweater for youth, available in green and blue colors, perfect for winter wear.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton blend",
+    "category": "Men",
+    "color": [
+      "Green",
+      "Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877162/image_17_csa0up.png"
+  },
+  {
+    "id": 15,
+    "name": "Women's Black Denim Jeans",
+    "description": "Classic black denim jeans for women, offering a comfortable fit and timeless style.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877164/image_14_lipth7.png"
+  },
+  {
+    "id": 16,
+    "name": "Children's Denim Shirt",
+    "description": "Stylish denim shirt for kids, perfect for casual outings and everyday wear.",
+    "price": 120,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Denim",
+    "category": "Kids",
+    "color": [
+      "Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877165/image_21_m29jhk.png"
+  },
+  {
+    "id": 17,
+    "name": "Youth Denim Jacket with Fur Lining",
+    "description": "Stylish blue denim jacket for youth, lined with soft fur for extra warmth and comfort during colder days.",
+    "price": 250,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Denim with fur lining",
+    "category": "Men",
+    "color": [
+      "Denim Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877166/image_23_p9e0yh.png"
+  },
+  {
+    "id": 18,
+    "name": "Youth Black Summer T-Shirt",
+    "description": "Comfortable black short-sleeve t-shirt for youth, perfect for casual summer wear.",
+    "price": 130,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton",
+    "category": "Men",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877167/image_25_ccmigv.png"
+  },
+  {
+    "id": 19,
+    "name": "Youth Denim Shirt with White Undershirt",
+    "description": "Stylish denim shirt for youth layered over a white undershirt, perfect for casual outings and everyday wear.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Denim and cotton",
+    "category": "Men",
+    "color": [
+      "Denim Blue",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877168/image_22_l5plnl.png"
+  },
+  {
+    "id": 20,
+    "name": "Youth Short-Sleeve T-Shirt",
+    "description": "Comfortable and stylish short-sleeve t-shirt for youth, available in white, black, and gray colors, perfect for casual wear.",
+    "price": 140,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton",
+    "category": "Men",
+    "color": [
+      "White",
+      "Black",
+      "Gray"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877173/image_26_uzwwbx.png"
+  },
+  {
+    "id": 21,
+    "name": "Women's Short Overalls",
+    "description": "Stylish dark green short overalls for women, perfect for casual summer outings and comfortable wear.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Dark Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877176/image_24_x7cvfx.png"
+  },
+  {
+    "id": 22,
+    "name": "Women's Light Green Polka Dot Summer Shirt",
+    "description": "Light Blue short-sleeve summer shirt for women, decorated with white polka dots, perfect for casual summer outings.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Light Blue",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877180/image_31_hkk72v.png"
+  },
+  {
+    "id": 23,
+    "name": "Women's Short Burnt Brown Dress",
+    "description": "Elegant short dress for women in burnt brown color, featuring full sleeves, perfect for casual or semi-formal occasions.",
+    "price": 220,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Burnt Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877180/image_32_tmny5c.png"
+  },
+  {
+    "id": 24,
+    "name": "Women's Wool Winter Jacket",
+    "description": "Warm and stylish women's winter jacket made with wool, perfect for cold weather and daily wear.",
+    "price": 300,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Wool blend",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Dry clean only. Do not bleach. Do not tumble dry. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877180/image_28_vmqm02.png"
+  },
+  {
+    "id": 25,
+    "name": "Women's Wool Scarf",
+    "description": "Soft and warm wool scarf for women, perfect for adding style and comfort during the colder months.",
+    "price": 80,
+    "size": [
+      "One Size"
+    ],
+    "material": "Wool",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Hand wash cold. Do not bleach. Lay flat to dry. Do not iron.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877181/image_27_ebwfw3.png"
+  },
+  {
+    "id": 26,
+    "name": "Women's Pistachio Green Sleeveless Long Dress",
+    "description": "Elegant sleeveless long dress for women in pistachio green color, perfect for summer events and formal occasions.",
+    "price": 280,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Pistachio Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877183/image_34_byriuz.png"
+  },
+  {
+    "id": 27,
+    "name": "Women's Black Short Dress with Shoulder Sleeves",
+    "description": "Elegant black short dress with off-shoulder style sleeves, perfect for parties and special occasions.",
+    "price": 300,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877183/image_35_yvua65.png"
+  },
+  {
+    "id": 28,
+    "name": "Women's dark red Sleeveless Long Dress",
+    "description": "Elegant sleeveless long dress for women in dark red color, perfect for summer events and formal occasions.",
+    "price": 280,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Dark red"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877185/image_33_zyqdk9.png"
+  },
+  {
+    "id": 29,
+    "name": "Women's Red Long Dress with Puff Sleeves",
+    "description": "Elegant long red dress for women featuring mid-length puff sleeves, perfect for formal events and evening occasions.",
+    "price": 350,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Red"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877188/image_36_umlfxf.png"
+  },
+  {
+    "id": 30,
+    "name": "Women's Brown Short-Sleeve Undershirt",
+    "description": "Comfortable brown short-sleeve shirt for women, perfect as an inner layer under clothing.",
+    "price": 90,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877196/image_38_jgqn6m.png"
+  },
+  {
+    "id": 31,
+    "name": "Women's Pink Vest",
+    "description": "Stylish pink vest for women, perfect to layer over shirts or blouses for added style and warmth.",
+    "price": 120,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Pink"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877199/image_40_m0fmot.png"
+  },
+  {
+    "id": 32,
+    "name": "Women's Short Green Sleeveless Dress",
+    "description": "Elegant short green sleeveless dress for women, perfect for parties and special occasions.",
+    "price": 260,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877198/image_37_lxip0j.png"
+  },
+  {
+    "id": 33,
+    "name": "Women's Beige Vest",
+    "description": "Elegant beige vest for women, perfect for layering over shirts or blouses for a stylish look.",
+    "price": 120,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877205/image_43_vzzzfs.png"
+  },
+  {
+    "id": 34,
+    "name": "Women's Black Shirt with White Sleeves",
+    "description": "Chic black shirt for women featuring contrasting white sleeves, perfect for a modern and stylish everyday look.",
+    "price": 160,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Black",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877206/image_39_soj61r.png"
+  },
+  {
+    "id": 35,
+    "name": "Women's Beige Trousers",
+    "description": "Elegant beige trousers for women, offering a versatile and chic look suitable for both casual and office wear.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877206/image_45_ken7li.png"
+  },
+  {
+    "id": 36,
+    "name": "Women's Victorian-Style White Shirt",
+    "description": "Elegant white shirt for women with a vintage Victorian-inspired design, featuring classic details for a sophisticated look.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877206/image_41_zgvq2f.png"
+  },
+  {
+    "id": 37,
+    "name": "Women's Long Black Denim Skirt with Front Slit",
+    "description": "Stylish long black denim skirt for women featuring a small front slit, perfect for casual and semi-formal outfits.",
+    "price": 220,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Denim",
+    "category": "Woman",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877210/image_42_canwlp.png"
+  },
+  {
+    "id": 38,
+    "name": "Women's Sleeveless Blue Jumpsuit",
+    "description": "Elegant sleeveless blue jumpsuit for women, offering a modern and chic silhouette perfect for casual outings or evening events.",
+    "price": 250,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Woman",
+    "color": [
+      "Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Machine wash cold with like colors. Do not bleach. Tumble dry low. Iron on low if needed.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877210/image_49_wlfzfs.png"
+  },
+  {
+    "id": 39,
+    "name": "Women's Sleeveless Jumpsuit",
+    "description": "Elegant sleeveless jumpsuit in beige, perfect for casual and semi-formal occasions. Made from breathable fabric for comfort and style.",
+    "price": 250,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Breathable polyester blend",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Hand wash cold, do not bleach, hang to dry.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877214/image_50_ays78z.png"
+  },
+  {
+    "id": 40,
+    "name": "Women's Wide-Leg Pants with Belt",
+    "description": "Beige wide-leg pants for women, featuring a stylish belt. Comfortable and versatile, perfect for casual or office wear.",
+    "price": 220,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft polyester blend",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877215/image_46_smkabn.png",
+    "careInstructions": "Machine wash cold, tumble dry low, iron on low heat if needed."
+  },
+  {
+    "id": 41,
+    "name": "Women's Short Black Top with White Bows",
+    "description": "Stylish black short top for women, featuring delicate white bows on the shoulders. Perfect for casual outings or pairing with high-waist bottoms.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Woman",
+    "color": [
+      "Black",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877216/image_44_rxr834.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 42,
+    "name": "Women's Dark Green One-Shoulder Jumpsuit",
+    "description": "Elegant dark green jumpsuit for women with a one-shoulder design. Perfect for evening events or special occasions, made from comfortable and breathable fabric.",
+    "price": 280,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Breathable polyester blend",
+    "category": "Woman",
+    "color": [
+      "Dark Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877216/image_52_v8alt7.png",
+    "careInstructions": "Hand wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 43,
+    "name": "Women's Black & White Sleeveless Romper",
+    "description": "Chic women's romper featuring a sleeveless black top and white shorts. Comfortable and stylish, perfect for casual outings or summer events.",
+    "price": 230,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Woman",
+    "color": [
+      "Black",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877216/image_51_gancjt.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 44,
+    "name": "Women's Black Puff-Sleeve Blouse",
+    "description": "Elegant black blouse for women featuring stylish puff sleeves. Perfect for parties, evening events, or special occasions, made from soft and comfortable fabric.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft polyester blend",
+    "category": "Woman",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877218/image_47_hdghen.png",
+    "careInstructions": "Hand wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 45,
+    "name": "Women's Beige Two-Piece Set",
+    "description": "Stylish women's two-piece set featuring a sleeveless top and wide-leg pants in beige. Comfortable and versatile, perfect for casual or semi-formal occasions.",
+    "price": 300,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton-polyester blend",
+    "category": "Woman",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877224/image_48_y28efs.png",
+    "careInstructions": "Machine wash cold, tumble dry low, iron on low heat if needed."
+  },
+  {
+    "id": 46,
+    "name": "Women's Red Mini Dress with White Shirt",
+    "description": "Chic women's mini dress in bright red paired with a full white shirt. Perfect for casual outings or semi-formal events, combining elegance and comfort.",
+    "price": 320,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton-polyester blend",
+    "category": "Woman",
+    "color": [
+      "Bright Red",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877227/image_53_uwiakt.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 47,
+    "name": "Men's Summer Green Short-Sleeve Shirt",
+    "description": "Casual men's short-sleeve shirt in a fresh summer green. Lightweight and breathable, perfect for warm weather and everyday wear.",
+    "price": 140,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Men",
+    "color": [
+      "Summer Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877227/image_54_mqtszr.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 48,
+    "name": "Men's Light Blue Long-Sleeve Shirt",
+    "description": "Elegant men's long-sleeve shirt in light blue, perfect for formal or semi-formal occasions. Made from soft and comfortable fabric.",
+    "price": 180,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "Light Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877228/image_56_gsoxyl.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry, iron on low heat if needed."
+  },
+  {
+    "id": 49,
+    "name": "Men's Navy Blue Long-Sleeve Shirt",
+    "description": "Classic men's long-sleeve shirt in navy blue, suitable for both formal and casual occasions. Made from soft and comfortable fabric.",
+    "price": 190,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "Navy Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877228/image_55_q2cgba.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry, iron on low heat if needed."
+  },
+  {
+    "id": 50,
+    "name": "Men's White Short-Sleeve Shirt with Brown Stripes",
+    "description": "Trendy men's short-sleeve shirt in white, featuring brown and light brown stripes along the button placket and sleeve ends. Perfect for casual or semi-formal occasions.",
+    "price": 160,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "White",
+      "Brown",
+      "Light Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877233/image_62_swjxue.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 51,
+    "name": "Men's Black & Beige Short-Sleeve Patterned Shirt",
+    "description": "Stylish men's short-sleeve shirt featuring a black and beige geometric stripe pattern with rectangular blocks. Perfect for casual or semi-formal occasions.",
+    "price": 170,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "Black",
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877234/image_61_mimr8w.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 52,
+    "name": "Men's Summer Two-Tone Short-Sleeve Shirt",
+    "description": "Casual men's short-sleeve shirt in beige and deep gray, perfect for summer. Lightweight and breathable, ideal for everyday wear or casual outings.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Men",
+    "color": [
+      "Beige",
+      "Deep Gray"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877234/image_59_lmjdlc.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 53,
+    "name": "Men's Summer Tri-Color Short-Sleeve Shirt",
+    "description": "Casual men's short-sleeve shirt featuring horizontal rectangular blocks in blue, gray, and white. Lightweight and breathable, ideal for summer outings.",
+    "price": 155,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Men",
+    "color": [
+      "Blue",
+      "Gray",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877237/image_60_kfx1su.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 54,
+    "name": "Men's Summer Two-Tone Short-Sleeve Shirt",
+    "description": "Casual men's short-sleeve shirt divided into two full sections: white and denim green. Lightweight and breathable, perfect for summer outings.",
+    "price": 150,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Men",
+    "color": [
+      "White",
+      "Denim Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877240/image_58_khjjii.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 55,
+    "name": "Men's Summer Black Short-Sleeve Shirt & Shorts Set",
+    "description": "Casual men's summer set featuring a black short-sleeve shirt and matching shorts. Lightweight and comfortable, perfect for hot weather and casual outings.",
+    "price": 280,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Men",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877243/image_64_c35tne.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 56,
+    "name": "Men's Green Long-Sleeve Shirt",
+    "description": "Elegant men's long-sleeve shirt in green, suitable for both casual and formal occasions. Made from soft and comfortable fabric.",
+    "price": 190,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877243/image_57_nycnoh.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry, iron on low heat if needed."
+  },
+  {
+    "id": 57,
+    "name": "Men's Summer White Shirt & Pants Set",
+    "description": "Lightweight and breathable men's summer set featuring a white shirt and matching pants. Perfect for hot weather, casual outings, or summer events.",
+    "price": 320,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight sheer fabric",
+    "category": "Men",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877244/image_65_g4jvvx.png",
+    "careInstructions": "Hand wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 58,
+    "name": "Women's White Summer Half-Sleeve Top",
+    "description": "Chic women's white top with half sleeves, perfect for summer occasions. Lightweight and stylish, ideal for casual or semi-formal events.",
+    "price": 160,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Women",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877247/image_66_swqwcs.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 59,
+    "name": "Men's Summer White & Blue Patterned Short-Sleeve Shirt",
+    "description": "Casual men's short-sleeve shirt in white and blue with integrated decorative patterns. Lightweight and breathable, perfect for summer outings.",
+    "price": 165,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight cotton blend",
+    "category": "Men",
+    "color": [
+      "White",
+      "Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877255/image_63_kjalfw.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 60,
+    "name": "Men's Brown Winter Top with Short Zipper",
+    "description": "Stylish men's brown winter top with long sleeves and a short zipper at the neckline. Warm, comfortable, and perfect for casual winter outings.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877256/image_68_fptmp7.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 61,
+    "name": "Men's Green & White Striped Winter Top",
+    "description": "Casual men's winter top with full sleeves, featuring green and white stripes. Warm, stylish, and perfect for casual winter outings.",
+    "price": 210,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Soft cotton blend",
+    "category": "Men",
+    "color": [
+      "Green",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877257/image_69_at9vck.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 62,
+    "name": "Men's Beige Pants",
+    "description": "Classic men's beige pants, comfortable and versatile. Perfect for casual or semi-formal occasions.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Men",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877257/image_70_hazhgg.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 63,
+    "name": "Men's Black Formal Pants",
+    "description": "Classic men's black formal pants, tailored style similar to suit trousers. Perfect for office, formal events, or semi-formal occasions.",
+    "price": 250,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Polyester-cotton blend",
+    "category": "Men",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877260/image_73_dpakag.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry, iron on low heat if needed."
+  },
+  {
+    "id": 64,
+    "name": "Men's White Short-Sleeve Crinkled Shirt",
+    "description": "Casual men's short-sleeve shirt in white with crinkled fabric texture. Lightweight and breathable, ideal for summer or casual outings.",
+    "price": 160,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Lightweight crinkled cotton blend",
+    "category": "Men",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877263/image_67_rp0ot9.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 65,
+    "name": "Men's Black Long-Sleeve Shirt with Chest Pocket",
+    "description": "Classic men's long-sleeve shirt in black, featuring a chest pocket. Suitable for casual, office, or semi-formal occasions.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Men",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877264/image_75_f5k6xw.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry, iron on low heat if needed."
+  },
+  {
+    "id": 66,
+    "name": "Men's Gray Formal Pants",
+    "description": "Classic men's gray formal pants, tailored style similar to suit trousers. Perfect for office, formal events, or semi-formal occasions.",
+    "price": 250,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Polyester-cotton blend",
+    "category": "Men",
+    "color": [
+      "Gray"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877266/image_72_fngram.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry, iron on low heat if needed."
+  },
+  {
+    "id": 67,
+    "name": "Men's Dark Brown Pants",
+    "description": "Classic men's dark brown pants, comfortable and versatile. Suitable for casual or semi-formal occasions.",
+    "price": 200,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Men",
+    "color": [
+      "Dark Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877267/image_71_b0akpy.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 68,
+    "name": "Men's Black Winter Jacket with White Lining",
+    "description": "Stylish men's winter jacket in black with white lining. Warm, comfortable, and perfect for casual winter outings.",
+    "price": 450,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Polyester blend with insulated lining",
+    "category": "Men",
+    "color": [
+      "Black",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877268/image_74_ccrl27.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 69,
+    "name": "Men's Heavy Winter Sweater",
+    "description": "Warm and heavy men's winter sweater, perfect for cold weather. Available in multiple colors: White, Navy, Gray, Black, and Beige.",
+    "price": 300,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Thick cotton blend",
+    "category": "Men",
+    "color": [
+      "White",
+      "Navy",
+      "Gray",
+      "Black",
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877281/image_77_nssv5f.png",
+    "careInstructions": "Machine wash cold, do not bleach, lay flat to dry."
+  },
+  {
+    "id": 70,
+    "name": "Men's Casual Navy Shirt & Beige Pants Set",
+    "description": "Stylish men's casual set featuring a navy short-sleeve shirt and beige full-length pants. Comfortable and perfect for casual or semi-formal outings.",
+    "price": 320,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton blend",
+    "category": "Men",
+    "color": [
+      "Navy",
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877283/image_78_m3cssy.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 71,
+    "name": "Men's Winter Checked Jacket with White Inner Top",
+    "description": "Stylish men's winter jacket featuring a checkered pattern in black, gray, and white, paired with a white inner top. Warm, comfortable, and perfect for casual winter outings.",
+    "price": 500,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Polyester blend with insulated lining",
+    "category": "Men",
+    "color": [
+      "Black",
+      "Gray",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877288/image_79_unmr65.png",
+    "careInstructions": "Machine wash cold, do not bleach, hang to dry."
+  },
+  {
+    "id": 72,
+    "name": "Men's Cotton Sleeveless Tops",
+    "description": "Youthful men's cotton sleeveless tops available in black and beige. Comfortable and breathable, ideal for casual summer wear.",
+    "price": 140,
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "material": "Cotton",
+    "category": "Men",
+    "color": [
+      "Black",
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877290/image_76_zxvzde.png",
+    "careInstructions": "Machine wash cold with like colors, do not bleach, hang to dry."
+  },
+  {
+    "id": 73,
+    "name": "Men's Nike High-Top Shoes",
+    "description": "Stylish men's high-top sneakers in white and black featuring the Nike logo. Comfortable, durable, and perfect for casual or sporty outfits.",
+    "price": 450,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic leather and textile",
+    "category": "Shoes",
+    "color": [
+      "White",
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877286/image_81_gvykvu.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid machine wash."
+  },
+  {
+    "id": 74,
+    "name": "Women's Beige High-Heel Winter Boots",
+    "description": "Elegant women's high-heel boots in beige with a tall shaft, ideal for casual or formal winter outfits.",
+    "price": 550,
+    "size": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "material": "Synthetic leather",
+    "category": "Shoes",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877291/image_80_fqev41.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 75,
+    "name": "Women's Black High Heel Shoes",
+    "description": "Elegant black high heel shoes for women featuring lace-up detail, perfect for parties, formal events, or a stylish night out.",
+    "price": 350,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "careInstructions": "Clean with a damp cloth. Avoid water immersion. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877294/image_83_zukyob.png"
+  },
+  {
+    "id": 76,
+    "name": "Women's White Sports Shoes",
+    "description": "Comfortable and stylish white sports shoes for women, perfect for workouts, casual outings, or everyday wear.",
+    "price": 250,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Synthetic",
+    "category": "Shoes",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Wipe clean with a damp cloth. Do not machine wash. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877297/image_82_dj4dgs.png"
+  },
+  {
+    "id": 77,
+    "name": "Women's Black Medical Shoes with Brown Heel",
+    "description": "Comfortable and stylish black medical shoes for women featuring a brown heel, ideal for long hours of wear while maintaining a professional look.",
+    "price": 280,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Black",
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Clean with a damp cloth. Avoid water immersion. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877304/image_89_bcghen.png"
+  },
+  {
+    "id": 78,
+    "name": "Women's White Sports Shoes",
+    "description": "Comfortable and stylish white sports shoes for women, perfect for workouts, casual outings, or everyday wear.",
+    "price": 250,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Synthetic",
+    "category": "Shoes",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Wipe clean with a damp cloth. Do not machine wash. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877306/image_85_h0nwk9.png"
+  },
+  {
+    "id": 79,
+    "name": "Women's White Sports Shoes",
+    "description": "Comfortable and stylish white sports shoes for women, perfect for workouts, casual outings, or everyday wear.",
+    "price": 210,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Synthetic",
+    "category": "Shoes",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Wipe clean with a damp cloth. Do not machine wash. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877306/image_88_dgkc3f.png"
+  },
+  {
+    "id": 80,
+    "name": "Women's Black Shoes with Red Heel Stripes",
+    "description": "Stylish black shoes for women featuring red stripes at the heel, perfect for casual wear or adding a pop of color to any outfit.",
+    "price": 270,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Black",
+      "Red"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "careInstructions": "Clean with a damp cloth. Avoid water immersion. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877306/image_88_dgkc3f.png"
+  },
+  {
+    "id": 81,
+    "name": "Women's White Sports Shoes",
+    "description": "Comfortable and stylish white sports shoes for women, perfect for workouts, casual outings, or everyday wear.",
+    "price": 210,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Synthetic",
+    "category": "Shoes",
+    "color": [
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "careInstructions": "Wipe clean with a damp cloth. Do not machine wash. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877318/image_84_rxxtef.png"
+  },
+  {
+    "id": 82,
+    "name": "Women's Brown Summer Sandals",
+    "description": "Comfortable and stylish brown summer sandals for women, featuring a toe strap design, perfect for casual outings and warm weather.",
+    "price": 150,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Synthetic",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "careInstructions": "Wipe clean with a damp cloth. Avoid prolonged water exposure. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877319/image_90_nsb5ww.png"
+  },
+  {
+    "id": 83,
+    "name": "Women's Green Summer Slippers",
+    "description": "Comfortable and casual green summer slippers for women, perfect for indoor and outdoor wear during warm weather.",
+    "price": 120,
+    "size": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "material": "Synthetic",
+    "category": "Shoes",
+    "color": [
+      "Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "careInstructions": "Wipe clean with a damp cloth. Avoid prolonged water exposure. Store in a cool, dry place.",
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877319/image_91_o9tnlh.png"
+  },
+  {
+    "id": 84,
+    "name": "Women's Brown Open-Toe Sandals",
+    "description": "Casual women's brown sandals with an open-toe design. Comfortable and stylish, perfect for summer outings or casual wear.",
+    "price": 180,
+    "size": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "material": "Synthetic leather",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877330/image_97_vazieq.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 85,
+    "name": "Women's Brown Open-Toe Sandals",
+    "description": "Casual women's brown sandals with an open-toe design. Comfortable and stylish, perfect for summer outings or casual wear.",
+    "price": 180,
+    "size": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "material": "Synthetic leather",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877330/image_96_suwj0j.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 86,
+    "name": "Men's Black High-Top Slides",
+    "description": "Comfortable men's black high-top slides. Perfect for casual wear, home use, or summer outings.",
+    "price": 120,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic material",
+    "category": "Shoes",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877337/image_100_navzxv.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 87,
+    "name": "Women's Black Sport Boots with White Heel Stripes",
+    "description": "Stylish women's black sport boots featuring white stripes at the heel. Comfortable, supportive, and perfect for casual or sporty outfits.",
+    "price": 400,
+    "size": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "material": "Synthetic leather and textile",
+    "category": "Shoes",
+    "color": [
+      "Black",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877325/image_87_teuu8o.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 88,
+    "name": "Men's Beige Casual Sport Shoes",
+    "description": "Youthful men's beige sport shoes, comfortable and suitable for daily casual wear. Lightweight and stylish, perfect for everyday activities.",
+    "price": 380,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic leather and textile",
+    "category": "Shoes",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877321/image_92_auprc6.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 89,
+    "name": "Men's Gray Athletic Medical Shoes",
+    "description": "Youthful men's gray athletic medical shoes, comfortable and supportive. Ideal for everyday wear, work, or light sports activities.",
+    "price": 400,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Breathable textile and synthetic leather",
+    "category": "Shoes",
+    "color": [
+      "Gray"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877320/image_93_ogihyp.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 90,
+    "name": "Women's Black Open-Toe Sandals",
+    "description": "Casual women's black sandals with an open-toe design. Comfortable and stylish, perfect for summer outings or everyday wear.",
+    "price": 180,
+    "size": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "material": "Synthetic leather",
+    "category": "Shoes",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877434/image_94_w5ciuj.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 91,
+    "name": "Men's Brown Formal Shoes",
+    "description": "Elegant men's brown formal shoes, perfect for special occasions or office wear. Classic and stylish design for a polished look.",
+    "price": 500,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877711/image_103_dwvbzr.png",
+    "careInstructions": "Wipe clean with a damp cloth, polish regularly to maintain shine."
+  },
+  {
+    "id": 92,
+    "name": "Men's White Nike Shoes with Red Logo",
+    "description": "Stylish men's white Nike shoes featuring a red logo. Comfortable, sporty, and perfect for casual or athletic wear.",
+    "price": 450,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic leather and textile",
+    "category": "Shoes",
+    "color": [
+      "White",
+      "Red"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877725/image_104_u08m5t.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid machine wash."
+  },
+  {
+    "id": 93,
+    "name": "Men's Formal Shoes",
+    "description": "Classic men's formal shoes, elegant and suitable for office or special occasions. Timeless design for a polished look.",
+    "price": 500,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877725/image_102_ku5a8j.png",
+    "careInstructions": "Wipe clean with a damp cloth, polish regularly to maintain shine."
+  },
+  {
+    "id": 94,
+    "name": "Men's Beige Lace-Up Shoes",
+    "description": "Classic men's beige lace-up shoes, comfortable and versatile. Perfect for casual, office, or semi-formal occasions.",
+    "price": 480,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877733/image_105_xaptsx.png",
+    "careInstructions": "Wipe clean with a damp cloth, polish regularly to maintain shine."
+  },
+  {
+    "id": 95,
+    "name": "Men's Brown Formal Shoes with Low Heel",
+    "description": "Classic men's brown formal shoes featuring a low heel. Elegant and suitable for office, formal events, or semi-formal occasions.",
+    "price": 500,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877733/image_101_wa66rs.png",
+    "careInstructions": "Wipe clean with a damp cloth, polish regularly to maintain shine."
+  },
+  {
+    "id": 96,
+    "name": "Men's High-Top Brown Lace-Up Shoes",
+    "description": "Stylish men's high-top brown lace-up shoes. Comfortable, supportive, and perfect for casual or semi-formal wear.",
+    "price": 520,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877736/image_109_twxg5n.png",
+    "careInstructions": "Wipe clean with a damp cloth, polish regularly to maintain shine."
+  },
+  {
+    "id": 97,
+    "name": "Men's White Sneakers with Royal Blue 'N' Logo",
+    "description": "Stylish men's white sneakers featuring a royal blue 'N' logo on the side. Comfortable, sporty, and perfect for casual or athletic wear.",
+    "price": 450,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic leather and textile",
+    "category": "Shoes",
+    "color": [
+      "White",
+      "Royal Blue"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877736/image_108_j3ribm.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid machine wash."
+  },
+  {
+    "id": 98,
+    "name": "Men's High-Top Green Slides",
+    "description": "Comfortable men's high-top slides in green. Perfect for casual wear, home use, or summer outings.",
+    "price": 130,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic material",
+    "category": "Shoes",
+    "color": [
+      "Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877759/image_107_otarxk.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 99,
+    "name": "Youthful White Boots with Brown Heel",
+    "description": "Stylish youthful boots in white with a contrasting brown heel. Comfortable and perfect for casual or semi-formal wear.",
+    "price": 480,
+    "size": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic leather",
+    "category": "Shoes",
+    "color": [
+      "White",
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877766/image_113_q39q80.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 100,
+    "name": "Men's Black Youthful Formal Shoes",
+    "description": "Stylish men's black formal shoes, perfect to pair with suits. Elegant, youthful, and suitable for office or special occasions.",
+    "price": 500,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Leather",
+    "category": "Shoes",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877766/image_110_q5k4g4.png",
+    "careInstructions": "Wipe clean with a damp cloth, polish regularly to maintain shine."
+  },
+  {
+    "id": 101,
+    "name": "Men's Light Brown Athletic Lace-Up Shoes",
+    "description": "Youthful men's light brown athletic shoes with laces. Comfortable, sporty, and perfect for casual or light sports activities.",
+    "price": 400,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic leather and textile",
+    "category": "Shoes",
+    "color": [
+      "Light Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877786/image_106_vhu2a0.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 102,
+    "name": "Youthful High-Top Slides",
+    "description": "Stylish youthful high-top slides, comfortable and perfect for casual wear or home use.",
+    "price": 130,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic material",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.4,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877789/image_114_xg6svt.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 103,
+    "name": "Youthful Brown Open-Toe Slides",
+    "description": "Casual youthful slides in brown with an open-toe design. Comfortable and ideal for summer outings or everyday wear.",
+    "price": 140,
+    "size": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "material": "Synthetic material",
+    "category": "Shoes",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877792/image_116_nqgzk6.png",
+    "careInstructions": "Wipe clean with a damp cloth, avoid water immersion."
+  },
+  {
+    "id": 104,
+    "name": "Women's Gold Heart-Shaped Ring",
+    "description": "Elegant women's ring in gold, designed with delicate heart shapes. Perfect for gifting or accessorizing any outfit.",
+    "price": 150,
+    "size": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877606/image_149_t9gxo9.png",
+    "careInstructions": "Avoid contact with water and chemicals, wipe gently with a soft cloth."
+  },
+  {
+    "id": 105,
+    "name": "Youthful Leaf-Engraved Ring",
+    "description": "Stylish youthful ring featuring delicate leaf engravings. Unique design suitable for daily wear or special occasions.",
+    "price": 160,
+    "size": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "material": "Stainless steel",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877617/image_148_j1odhi.png",
+    "careInstructions": "Avoid contact with water and chemicals, clean with a soft dry cloth."
+  },
+  {
+    "id": 106,
+    "name": "Women's Leaf-Design Ring",
+    "description": "Elegant women's ring featuring a delicate leaf design. A stylish accessory perfect for daily wear or special occasions.",
+    "price": 170,
+    "size": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "material": "Stainless steel",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877620/image_151_rjqwdc.png",
+    "careInstructions": "Avoid exposure to water and chemicals, clean gently with a soft cloth."
+  },
+  {
+    "id": 107,
+    "name": "Women's Hollow Heart Gold Ring",
+    "description": "Chic women's ring in gold with a hollow heart design. Elegant and lightweight, perfect for daily wear or gifting.",
+    "price": 160,
+    "size": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877647/image_150_sbflfd.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 108,
+    "name": "Set of 3 Women's Rings with White Beads",
+    "description": "Elegant set of 3 women's rings decorated with small white beads. Delicate and stylish, perfect for layering or wearing individually.",
+    "price": 200,
+    "size": [
+      "6",
+      "7",
+      "8"
+    ],
+    "material": "Alloy with beads",
+    "category": "Accessories",
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877792/image_117_d3roal.png",
+    "careInstructions": "Avoid contact with water and chemicals, clean gently with a soft dry cloth."
+  },
+  {
+    "id": 109,
+    "name": "Women's Gold Bracelet",
+    "description": "Elegant women's bracelet in gold color. A timeless accessory perfect for daily wear or special occasions.",
+    "price": 220,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877795/image_118_hugpc8.png",
+    "careInstructions": "Avoid contact with water and chemicals, wipe gently with a soft cloth."
+  },
+  {
+    "id": 110,
+    "name": "Women's Layered Gold Necklace",
+    "description": "Chic women's layered necklace in gold tone. Stylish and versatile, perfect for adding elegance to any outfit.",
+    "price": 250,
+    "size": [
+      "One Size"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877812/image_125_qgalbt.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Store in a dry place and wipe gently with a soft cloth."
+  },
+  {
+    "id": 111,
+    "name": "Women's Gold Rose-Shaped Earrings",
+    "description": "Elegant women's earrings in a rose shape with a gold finish. Stylish and feminine, perfect for daily wear or special occasions.",
+    "price": 180,
+    "size": [
+      "One Size"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877820/image_126_nxfngh.png",
+    "careInstructions": "Avoid water and perfume, wipe gently with a soft dry cloth."
+  },
+  {
+    "id": 112,
+    "name": "Set of 6 Women's Necklaces",
+    "description": "A set of 6 elegant women's necklaces in various beautiful designs. Perfect for layering, mixing, or wearing individually to suit any occasion.",
+    "price": 300,
+    "size": [
+      "One Size"
+    ],
+    "material": "Alloy with gold plating",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877832/image_124_wtbxox.png",
+    "careInstructions": "Keep away from water and chemicals, store in a dry place, and wipe gently with a soft cloth."
+  },
+  {
+    "id": 113,
+    "name": "Set of 6 Elegant Women's Necklaces",
+    "description": "A set of 6 elegant and stylish women's necklaces. Perfect for layering or wearing individually to complement any outfit.",
+    "price": 310,
+    "size": [
+      "One Size"
+    ],
+    "material": "Alloy with gold plating",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877839/image_121_sidxim.png",
+    "careInstructions": "Avoid water and chemicals, store in a dry place, and wipe gently with a soft cloth."
+  },
+  {
+    "id": 114,
+    "name": "Women's Green Watch",
+    "description": "Elegant women's watch in green color. A stylish and modern accessory perfect for daily wear or special occasions.",
+    "price": 350,
+    "size": [
+      "One Size"
+    ],
+    "material": "Stainless steel and leather strap",
+    "category": "Accessories",
+    "color": [
+      "Green"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877841/image_122_onmqzk.png",
+    "careInstructions": "Keep away from water and extreme heat. Clean with a soft dry cloth."
+  },
+  {
+    "id": 115,
+    "name": "Women's Gold Bracelet with White Pearls",
+    "description": "Elegant women's bracelet featuring white pearls and a gold finish. Stylish and feminine, perfect for special occasions or daily wear.",
+    "price": 280,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal with pearls",
+    "category": "Accessories",
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877847/image_128_vmc02x.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 116,
+    "name": "Women's Elegant Gold Bracelet",
+    "description": "Stylish women's bracelet in gold color. Elegant and versatile, perfect for daily wear or special occasions.",
+    "price": 260,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877854/image_127_dtlngy.png",
+    "careInstructions": "Avoid contact with water and chemicals, wipe gently with a soft cloth."
+  },
+  {
+    "id": 117,
+    "name": "Women's Gold Chain Necklace",
+    "description": "Elegant women's necklace with a gold chain. Simple, stylish, and perfect for daily wear or layering with other jewelry.",
+    "price": 240,
+    "size": [
+      "One Size"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877867/image_123_a5jvcd.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 118,
+    "name": "Women's Half Gold Half Pearl Bracelet",
+    "description": "Elegant women's bracelet featuring a half gold and half white pearl design. Stylish and feminine, perfect for daily wear or special occasions.",
+    "price": 290,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal and pearls",
+    "category": "Accessories",
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877883/image_130_h90dcj.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 119,
+    "name": "Women's Half Chain Half Pearl Bracelet with Open Heart Charm",
+    "description": "Elegant women's bracelet featuring half chain, half white pearls, and an open heart charm at the end. Stylish and feminine, perfect for daily wear or special occasions.",
+    "price": 310,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal and pearls",
+    "category": "Accessories",
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877883/image_131_mj3r3x.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 120,
+    "name": "Women's Elegant Bracelet",
+    "description": "Stylish women's bracelet in a sleek and elegant design. Perfect for daily wear or to complement any outfit on special occasions.",
+    "price": 270,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877884/image_129_u1sohj.png",
+    "careInstructions": "Avoid contact with water and chemicals, wipe gently with a soft cloth."
+  },
+  {
+    "id": 121,
+    "name": "Women's Bracelet and Ring Set with Pearls and Gold Chain",
+    "description": "Elegant women's set featuring a bracelet and ring with white pearls and gold chain accents. Stylish and versatile, perfect for daily wear or special occasions.",
+    "price": 450,
+    "size": [
+      "Adjustable",
+      "Ring sizes 6-9"
+    ],
+    "material": "Gold-plated metal and pearls",
+    "category": "Accessories",
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877893/image_134_ws6rp4.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 122,
+    "name": "Women's Hair Clip",
+    "description": "Stylish women's hair clip, perfect for securing hair in place while adding a chic touch to any hairstyle.",
+    "price": 50,
+    "size": [
+      "One Size"
+    ],
+    "material": "Plastic/Metal",
+    "category": "Accessories",
+    "color": [
+      "Black",
+      "White",
+      "Brown",
+      "Beige"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.5,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877897/image_136_hli8na.png",
+    "careInstructions": "Keep away from heat and avoid dropping. Clean gently with a damp cloth."
+  },
+  {
+    "id": 123,
+    "name": "Unisex Brown Sunglasses",
+    "description": "Stylish brown sunglasses suitable for both men and women. Provides UV protection and adds a chic touch to any outfit.",
+    "price": 300,
+    "size": [
+      "One Size"
+    ],
+    "material": "Plastic and metal frame",
+    "category": "Accessories",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877906/image_138_xkvpxp.png",
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat."
+  },
+  {
+    "id": 124,
+    "name": "Women's Long Hair Clip - Brown & Light Brown",
+    "description": "Elegant women's long hair clip in brown and light brown colors. Perfect for securing long hair while adding a stylish touch to any hairstyle.",
+    "price": 60,
+    "size": [
+      "One Size"
+    ],
+    "material": "Plastic/Metal",
+    "category": "Accessories",
+    "color": [
+      "Brown",
+      "Light Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877907/image_135_glnmty.png",
+    "careInstructions": "Keep away from heat and avoid dropping. Clean gently with a damp cloth."
+  },
+  {
+    "id": 125,
+    "name": "Women's Bracelet with Large Center Pearl",
+    "description": "Elegant women's bracelet featuring a large central pearl. Stylish and feminine, perfect for daily wear or special occasions.",
+    "price": 300,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Gold-plated metal and pearl",
+    "category": "Accessories",
+    "color": [
+      "Gold",
+      "White"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.9,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877910/image_137_ug6euh.png",
+    "careInstructions": "Avoid water, perfume, and chemicals. Wipe gently with a soft cloth."
+  },
+  {
+    "id": 126,
+    "name": "Youth Black Necklace with Cross Pendant",
+    "description": "Stylish youth necklace in black featuring a cross pendant. Trendy and versatile, perfect for casual wear or as a statement accessory.",
+    "price": 200,
+    "size": [
+      "One Size"
+    ],
+    "material": "Alloy with black coating",
+    "category": "Accessories",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877912/image_139_fdnncw.png",
+    "careInstructions": "Avoid water and chemicals. Store in a dry place and wipe gently with a soft cloth."
+  },
+  {
+    "id": 127,
+    "name": "Youth Brown Cap",
+    "description": "Stylish youth cap in brown color. Comfortable and perfect for casual outings or adding a trendy touch to any outfit.",
+    "price": 120,
+    "size": [
+      "Adjustable"
+    ],
+    "material": "Cotton/Polyester blend",
+    "category": "Accessories",
+    "color": [
+      "Brown"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.6,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877919/image_140_zteh7g.png",
+    "careInstructions": "Hand wash recommended. Avoid exposure to extreme heat."
+  },
+  {
+    "id": 128,
+    "name": "Youth Ring (Signet Style)",
+    "description": "Stylish youth ring designed in a signet style. Trendy and bold, perfect for casual wear or adding a statement to any outfit.",
+    "price": 180,
+    "size": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "material": "Alloy",
+    "category": "Accessories",
+    "color": [
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877931/image_144_bden1p.png",
+    "careInstructions": "Avoid water and chemicals. Clean gently with a soft cloth."
+  },
+  {
+    "id": 129,
+    "name": "Unisex Black Sunglasses with Gold Frame",
+    "description": "Trendy unisex sunglasses featuring black lenses and a gold frame. Stylish and versatile, perfect for casual wear or making a fashion statement.",
+    "price": 350,
+    "size": [
+      "One Size"
+    ],
+    "material": "Metal frame with UV-protected lenses",
+    "category": "Accessories",
+    "color": [
+      "Black",
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877950/image_145_xpptv8.png",
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat."
+  },
+  {
+    "id": 130,
+    "name": "Unisex Square Sunglasses with Gold Frame",
+    "description": "Trendy unisex square sunglasses with black lenses and a gold frame. Stylish and versatile, perfect for daily wear or making a fashion statement.",
+    "price": 360,
+    "size": [
+      "One Size"
+    ],
+    "material": "Metal frame with UV-protected lenses",
+    "category": "Accessories",
+    "color": [
+      "Black",
+      "Gold"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.8,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877923/image_142_gidgpz.png",
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat."
+  },
+  {
+    "id": 131,
+    "name": "Black Sunglasses with Black Frame",
+    "description": "Classic sunglasses with black lenses and a black frame. Stylish and versatile, suitable for both men and women for daily wear.",
+    "price": 320,
+    "size": [
+      "One Size"
+    ],
+    "material": "Plastic/Metal frame with UV-protected lenses",
+    "category": "Accessories",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877938/image_143_qhm0bv.png",
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat."
+  },
+  {
+    "id": 132,
+    "name": "Unisex Black-on-Black Sunglasses",
+    "description": "Sleek unisex sunglasses featuring black lenses and a black frame. Modern and versatile, perfect for casual wear or making a bold fashion statement.",
+    "price": 320,
+    "size": [
+      "One Size"
+    ],
+    "material": "Plastic/Metal frame with UV-protected lenses",
+    "category": "Accessories",
+    "color": [
+      "Black"
+    ],
+    "inWishlist": false,
+    "inCard": false,
+    "rating": 4.7,
+    "image": "https://res.cloudinary.com/dv71q60kp/image/upload/v1758877938/image_143_qhm0bv.png",
+    "careInstructions": "Clean lenses with a soft cloth. Avoid exposure to extreme heat."
+  }]
+  }

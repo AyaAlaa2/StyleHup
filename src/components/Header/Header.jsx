@@ -1,0 +1,154 @@
+import  { useState } from "react";
+import { Link } from "react-router-dom";
+import { Links } from "./HeaderLinks";
+import { FaCube, FaBars, FaTimes } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import { GoHeart, GoPerson } from "react-icons/go";
+import { PiShoppingBagThin } from "react-icons/pi";
+import { HiChevronDown } from "react-icons/hi";
+
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [shopOpen, setShopOpen] = useState(false);
+
+  const closeAll = () => {
+    setMenuOpen(false);
+    setShopOpen(false);
+  };
+
+  return (
+    <header className="navbar justify-between items-center px-4 md:px-[40px] py-[12px] shadow-sm text-black relative">
+      <div className="flex items-center gap-4 md:gap-[32px]">
+        <Link to="/" className="flex flex-row gap-2 md:gap-[16px] items-center">
+          <FaCube className="text-[18px]" />
+          <p className="font-bold text-[18px] leading-[23px] text-[#141414]">
+            STYLEHUP
+          </p>
+        </Link>
+
+        <div className="hidden md:flex gap-6 text-md font-semibold">
+          {Links.map((L, index) =>
+            L.Link === "Shop" ? (
+              <div key={index} className="relative">
+                <button
+                  onClick={() => setShopOpen(!shopOpen)}
+                  className="flex items-center gap-1 cursor-pointer"
+                >
+                  {L.Link}
+                  <HiChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      shopOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {shopOpen && (
+                  <ul className="absolute left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50">
+                    {["All", "Men", "Woman", "Kids", "Accessories"].map(
+                      (cat, idx) => (
+                        <li key={idx}>
+                          <Link
+                            to={`/Prouducts/${cat}`}
+                            className="block px-4 py-2 text-gray-800  hover:!bg-gray-200 rounded-md"
+                            onClick={() => setShopOpen(false)}
+                          >
+                            {cat}
+                          </Link>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <Link key={index} to={L.path}>
+                {L.Link}
+              </Link>
+            )
+          )}
+        </div>
+      </div>
+
+      <div className="flex items-center gap-3 md:gap-[32px]">
+        <label className="hidden md:flex bg-[#F2F2F2] rounded-lg ps-[12px] items-center">
+          <CiSearch className="text-[22px] text-[#757575]" />
+          <input
+            type="search"
+            placeholder="Search"
+            className="py-[6px] ps-[12px] pe-[8px] text-[14px] md:text-[16px] text-[#757575] focus:outline-none"
+          />
+        </label>
+
+        <div className="flex gap-[6px] md:gap-[8px] items-center">
+          <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
+            <Link to="#">
+              <GoHeart className="text-[18px] md:text-[20px] text-[#141414]" />
+            </Link>
+          </div>
+          <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
+            <Link to="#">
+              <GoPerson className="text-[18px] md:text-[20px] text-[#141414]" />
+            </Link>
+          </div>
+          <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
+            <Link to="#">
+              <PiShoppingBagThin className="text-[18px] md:text-[20px] text-[#141414]" />
+            </Link>
+          </div>
+        </div>
+
+        <button
+          className="md:hidden text-xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {menuOpen && (
+        <div className="absolute z-50 top-[60px] left-0 w-full bg-white shadow-md md:hidden flex flex-col gap-2 p-4 font-semibold">
+          {Links.map((L, index) =>
+            L.Link === "Shop" ? (
+              <div key={index} className="flex flex-col gap-1">
+                <button
+                  onClick={() => setShopOpen(!shopOpen)}
+                  className="flex items-center gap-1 cursor-pointer"
+                >
+                  {L.Link}
+                  <HiChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      shopOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {shopOpen && (
+                  <div className="flex flex-col ps-4 gap-1">
+                    {["All", "Men", "Woman", "Kids", "Accessories"].map(
+                      (cat, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/Prouducts/${cat}`}
+                          onClick={closeAll}
+                          className="block py-1 px-2 hover:!bg-gray-200 rounded-md"
+                        >
+                          {cat}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link key={index} to={L.path} onClick={closeAll} className="py-2">
+                {L.Link}
+              </Link>
+            )
+          )}
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Header;
