@@ -4,7 +4,7 @@ import { navLinks, socialLinks } from "./navLinks";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-6 justify-center items-start md:items-center text-[#757575] px-[20px] py-[40px]">
+    <div className="flex flex-col gap-6 justify-center items-start md:items-center text-[#757575] px-[20px] py-[40px]">
       <ul className="container flex flex-col md:flex-row gap-[30px] capitalize text-[16px] font-normal justify-around items-start">
         {navLinks.map((link, idx) => (
           <li
@@ -27,7 +27,7 @@ const Footer = () => {
           &copy; 2024 Fashion Forward. All rights reserved.
         </p>
       </div>
-    </footer>
+    </div>
   );
 };
 
