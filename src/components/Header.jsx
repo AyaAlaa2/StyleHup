@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { headerLinks, shopLinks } from "./navLinks";
-import { FaCube, FaTimes } from "react-icons/fa";
+import { headerLinks } from "./navLinks";
+import { FaCube, FaBars, FaTimes } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { GoHeart, GoPerson } from "react-icons/go";
 import { PiShoppingBagThin } from "react-icons/pi";
-import { HiBars4 } from "react-icons/hi2";
 import { HiChevronDown } from "react-icons/hi";
 
 const Header = () => {
@@ -29,13 +28,13 @@ const Header = () => {
 
         <div className="hidden md:flex gap-6 text-md font-semibold">
           {headerLinks.map((L, index) =>
-            L.title === "Shop" ? (
+            L.Link === "Shop" ? (
               <div key={index} className="relative">
                 <button
                   onClick={() => setShopOpen(!shopOpen)}
                   className="flex items-center gap-1 cursor-pointer"
                 >
-                  {L.title}
+                  {L.Link}
                   <HiChevronDown
                     className={`w-4 h-4 transition-transform ${
                       shopOpen ? "rotate-180" : ""
@@ -44,24 +43,26 @@ const Header = () => {
                 </button>
 
                 {shopOpen && (
-                  <ul className="absolute left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50 bg-white">
-                    {shopLinks.map((cat, idx) => (
-                      <li key={idx}>
-                        <Link
-                          to={`/Products/${cat.path}`}
-                          className="block px-4 py-2 text-gray-800  hover:!bg-gray-200 rounded-md"
-                          onClick={() => setShopOpen(false)}
-                        >
-                          {cat.title}
-                        </Link>
-                      </li>
-                    ))}
+                  <ul className="absolute left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50">
+                    {["All", "Men", "Woman", "Kids", "Accessories"].map(
+                      (cat, idx) => (
+                        <li key={idx}>
+                          <Link
+                            to={`/Prouducts/${cat}`}
+                            className="block px-4 py-2 text-gray-800  hover:!bg-gray-200 rounded-md"
+                            onClick={() => setShopOpen(false)}
+                          >
+                            {cat}
+                          </Link>
+                        </li>
+                      )
+                    )}
                   </ul>
                 )}
               </div>
             ) : (
               <Link key={index} to={L.path}>
-                {L.title}
+                {L.Link}
               </Link>
             )
           )}
@@ -85,7 +86,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-            <Link to="/signin">
+            <Link to="#">
               <GoPerson className="text-[18px] md:text-[20px] text-[#141414]" />
             </Link>
           </div>
@@ -100,28 +101,20 @@ const Header = () => {
           className="md:hidden text-xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? (
-            <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-              <FaTimes className="text-[18px] md:text-[20px] text-[#141414]" />
-            </div>
-          ) : (
-            <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-              <HiBars4 className="text-[18px] md:text-[20px] text-[#141414]" />
-            </div>
-          )}
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {menuOpen && (
         <div className="absolute z-50 top-[60px] left-0 w-full bg-white shadow-md md:hidden flex flex-col gap-2 p-4 font-semibold">
           {headerLinks.map((L, index) =>
-            L.title === "Shop" ? (
+            L.Link === "Shop" ? (
               <div key={index} className="flex flex-col gap-1">
                 <button
                   onClick={() => setShopOpen(!shopOpen)}
                   className="flex items-center gap-1 cursor-pointer"
                 >
-                  {L.title}
+                  {L.Link}
                   <HiChevronDown
                     className={`w-4 h-4 transition-transform ${
                       shopOpen ? "rotate-180" : ""
@@ -131,22 +124,24 @@ const Header = () => {
 
                 {shopOpen && (
                   <div className="flex flex-col ps-4 gap-1">
-                    {shopLinks.map((cat, idx) => (
-                      <Link
-                        key={idx}
-                        to={`/Prouducts/${cat.path}`}
-                        onClick={closeAll}
-                        className="block py-1 px-2 hover:!bg-gray-200 rounded-md"
-                      >
-                        {cat.title}
-                      </Link>
-                    ))}
+                    {["All", "Men", "Woman", "Kids", "Accessories"].map(
+                      (cat, idx) => (
+                        <Link
+                          key={idx}
+                          to={`/Prouducts/${cat}`}
+                          onClick={closeAll}
+                          className="block py-1 px-2 hover:!bg-gray-200 rounded-md"
+                        >
+                          {cat}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
             ) : (
               <Link key={index} to={L.path} onClick={closeAll} className="py-2">
-                {L.title}
+                {L.Link}
               </Link>
             )
           )}
