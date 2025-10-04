@@ -15,12 +15,17 @@ export default function Products() {
     setCurrentPage(1);
   }, [categoryName]);
 
-  if (isLoading)
+    if (isLoading)
     return (
-      <span className="loading loading-spinner loading-xl text-center"></span>
+      <div className="flex justify-center items-center h-96">
+        <span className="loading loading-spinner loading-xl  text-center"></span>
+      </div>
     );
-  if (isError) return <p>Error: {error.message}</p>;
-
+  if (isError) return
+  <div className="flex justify-center items-center h-96">
+    <p className="text-xl">Error: {error.message}</p>;
+  </div>; 
+  
   const filteredProducts =
     !categoryName || categoryName === "All"
       ? products
@@ -79,4 +84,5 @@ export default function Products() {
     </div>
   );
 }
+
 
