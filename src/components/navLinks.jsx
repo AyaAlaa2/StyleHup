@@ -3,21 +3,14 @@ import { PiFacebookLogoLight } from "react-icons/pi";
 import { SlSocialInstagram, SlSocialTwitter } from "react-icons/sl";
 
 export const headerLinks = [
-  { title: "Home", path: "/" },
-  { title: "Shop", path: "#" },
-  { title: "New Arrivals", path: "/New" },
-  { title: "Sale", path: "/Sale" },
-  { title: "Blog", path: "/Blog" },
-  { title: "Contact", path: "/Contact" },
+  { Link: "Home", path: "/" },
+  { Link: "Shop", path: "#" },
+  { Link: "New Arrivals", path: "/New" },
+  { Link: "Sale", path: "/Sale" },
+  { Link: "Blog", path: "/Blog" },
+  { Link: "Contact", path: "/Contact" },
 ];
 
-export const shopLinks = [
-  { title: "All", path: "all" },
-  { title: "Men", path: "men" },
-  { title: "Women", path: "women" },
-  { title: "Kids", path: "kids" },
-  { title: "Accessories", path: "accessories" },
-];
 
 export const navLinks = [
   {
@@ -56,3 +49,4 @@ export const socialLinks = [
     href: "https://facebook.com",
   },
 ];
+
