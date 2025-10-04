@@ -16,14 +16,10 @@ const App = () => {
         <div className="container lg:w-[85%] p-[20px] pb-[0]">
           <Routes>
             <Route index path="/" element={<Home />} />
-            <Route path="/shop" element={<Home />} />
             <Route path="/new" element={<Home />} />
             <Route path="/Products">
-              <Route index path="all" element={<Products />} />
-              <Route path="men" element={<Home />} />
-              <Route path="women" element={<Home />} />
-              <Route path="kids" element={<Home />} />
-              <Route path="accessories" element={<Home />} />
+              <Route index element={<Products />} />
+              <Route path=":categoryName" element={<Products />} />
             </Route>
             <Route path="/blog" element={<Home />} />
             <Route path="/contact" element={<ContactUs />} />

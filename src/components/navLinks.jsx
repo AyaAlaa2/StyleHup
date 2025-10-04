@@ -5,10 +5,10 @@ import { SlSocialInstagram, SlSocialTwitter } from "react-icons/sl";
 export const headerLinks = [
   { title: "Home", path: "/" },
   { title: "Shop", path: "#" },
-  { title: "New Arrivals", path: "/New" },
-  { title: "Sale", path: "/Sale" },
-  { title: "Blog", path: "/Blog" },
-  { title: "Contact", path: "/Contact" },
+  { title: "New Arrivals", path: "#" },
+  { title: "Sale", path: "#" },
+  { title: "Blog", path: "#" },
+  { title: "Contact", path: "/contact" },
 ];
 
 export const shopLinks = [

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Products() {
   const { categoryName } = useParams();
-  const { data: products, isLoading, isError, error } = useProducts();
+  const { data: products, isLoading, isError } = useProducts();
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
@@ -17,12 +17,19 @@ export default function Products() {
 
   if (isLoading)
     return (
-      <span className="loading loading-spinner loading-xl text-center"></span>
+      <div className="min-h-[200px] w-full flex items-center justify-center">
+        <span className="loading loading-spinner loading-xl "></span>
+      </div>
     );
-  if (isError) return <p>Error: {error.message}</p>;
+  if (isError)
+    return (
+      <div className="min-h-[200px] w-full flex items-center justify-center">
+        <p className="text-center text-3xl">Oops ! An Error Occured</p>
+      </div>
+    );
 
   const filteredProducts =
-    !categoryName || categoryName === "All"
+    categoryName && categoryName === "all"
       ? products
       : products.filter((item) => item.category === categoryName);
 
@@ -41,7 +48,7 @@ export default function Products() {
         <span className="hover:underline cursor-pointer">
           <Link to="/Products/all">Shop</Link>
         </span>
-        {categoryName && categoryName !== "All" && (
+        {categoryName && categoryName !== "all" && (
           <>
             <span className="mx-2">{"/ "}</span>
             <span className="font-semibold">{categoryName}</span>
@@ -49,7 +56,7 @@ export default function Products() {
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 min-h-[250px]">
         {currentProducts.length === 0 ? (
           <p className="col-span-full text-center text-gray-500">
             No products found.
