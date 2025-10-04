@@ -81,17 +81,17 @@ const Header = () => {
 
         <div className="flex gap-[6px] md:gap-[8px] items-center">
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-            <Link to="#">
+            <Link to="/wishList">
               <GoHeart className="text-[18px] md:text-[20px] text-[#141414]" />
             </Link>
           </div>
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-            <Link to="#">
+            <Link to="/signin">
               <GoPerson className="text-[18px] md:text-[20px] text-[#141414]" />
             </Link>
           </div>
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-            <Link to="#">
+            <Link to="/card">
               <PiShoppingBagThin className="text-[18px] md:text-[20px] text-[#141414]" />
             </Link>
           </div>
