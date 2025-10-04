@@ -1,4 +1,4 @@
-import React from "react";
+
 import Home from "./components/home/Home";
 import Header from "./components/Header";
 import SignPage from "./components/signPages/SignPage";
@@ -18,13 +18,7 @@ const App = () => {
             <Route index path="/" element={<Home />} />
             <Route path="/shop" element={<Home />} />
             <Route path="/new" element={<Home />} />
-            <Route path="/Products">
-              <Route index path="all" element={<Products />} />
-              <Route path="men" element={<Home />} />
-              <Route path="women" element={<Home />} />
-              <Route path="kids" element={<Home />} />
-              <Route path="accessories" element={<Home />} />
-            </Route>
+            <Route path="/Prouducts/:categoryName" element={<Products />} />
             <Route path="/blog" element={<Home />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/signin" element={<SignPage />} />
