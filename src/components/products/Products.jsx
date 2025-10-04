@@ -21,10 +21,11 @@ export default function Products() {
         <span className="loading loading-spinner loading-xl  text-center"></span>
       </div>
     );
-  if (isError) return
-  <div className="flex justify-center items-center h-96">
-    <p className="text-xl">Error: {error.message}</p>;
-  </div>; 
+  if (isError) return(
+     <div className="flex justify-center items-center h-96">
+    <p className="text-xl">Error: {error.message} </p>
+  </div>
+  )
   
   const filteredProducts =
     !categoryName || categoryName === "All"
@@ -84,5 +85,6 @@ export default function Products() {
     </div>
   );
 }
+
 
 
