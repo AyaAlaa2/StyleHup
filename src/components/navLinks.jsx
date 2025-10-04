@@ -22,7 +22,7 @@ export const shopLinks = [
 export const navLinks = [
   {
     title: "About Us",
-    href: "/about",
+    href: "/aboutUs",
   },
   {
     title: "Contact Us",
