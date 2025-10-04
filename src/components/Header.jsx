@@ -43,7 +43,7 @@ const Header = () => {
                 </button>
 
                 {shopOpen && (
-                  <ul className="absolute left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50">
+                  <ul className="absolute  bg-white left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50">
                     {["All", "Men", "Woman", "Kids", "Accessories"].map(
                       (cat, idx) => (
                         <li key={idx}>
@@ -152,3 +152,4 @@ const Header = () => {
 };
 
 export default Header;
+
