@@ -10,6 +10,7 @@ import { HiChevronDown } from "react-icons/hi";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
+  const shopLink = ["All", "Men", "Women", "Kids", "Accessories"];
 
   const closeAll = () => {
     setMenuOpen(false);
@@ -28,13 +29,13 @@ const Header = () => {
 
         <div className="hidden md:flex gap-6 text-md font-semibold">
           {headerLinks.map((L, index) =>
-            L.Link === "Shop" ? (
+            L.title === "Shop" ? (
               <div key={index} className="relative">
                 <button
                   onClick={() => setShopOpen(!shopOpen)}
                   className="flex items-center gap-1 cursor-pointer"
                 >
-                  {L.Link}
+                  {L.title}
                   <HiChevronDown
                     className={`w-4 h-4 transition-transform ${
                       shopOpen ? "rotate-180" : ""
@@ -43,26 +44,24 @@ const Header = () => {
                 </button>
 
                 {shopOpen && (
-                  <ul className="absolute  bg-white left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50">
-                    {["All", "Men", "Woman", "Kids", "Accessories"].map(
-                      (cat, idx) => (
-                        <li key={idx}>
-                          <Link
-                            to={`/Prouducts/${cat}`}
-                            className="block px-4 py-2 text-gray-800  hover:!bg-gray-200 rounded-md"
-                            onClick={() => setShopOpen(false)}
-                          >
-                            {cat}
-                          </Link>
-                        </li>
-                      )
-                    )}
+                  <ul className="absolute bg-white left-0 top-full mt-1 w-48 rounded-lg shadow-lg z-50">
+                    {shopLink.map((cat, idx) => (
+                      <li key={idx}>
+                        <Link
+                          to={`/Products/${cat.toString().toLowerCase()}`}
+                          className="block px-4 py-2 text-gray-800  hover:!bg-gray-200 rounded-md"
+                          onClick={() => setShopOpen(false)}
+                        >
+                          {cat}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 )}
               </div>
             ) : (
               <Link key={index} to={L.path}>
-                {L.Link}
+                {L.title}
               </Link>
             )
           )}
@@ -152,4 +151,3 @@ const Header = () => {
 };
 
 export default Header;
-

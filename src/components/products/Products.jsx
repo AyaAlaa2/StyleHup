@@ -31,7 +31,7 @@ export default function Products() {
   const filteredProducts =
     categoryName && categoryName === "all"
       ? products
-      : products.filter((item) => item.category === categoryName);
+      : products.filter((item) => item.category.toLowerCase() === categoryName);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -46,12 +46,14 @@ export default function Products() {
     <div>
       <div className=" text-gray-600 text-md my-10">
         <span className="hover:underline cursor-pointer">
-          <Link to="/Prouducts/All">Shop</Link>
+          <Link to="/Products/all">Shop</Link>
         </span>
         {categoryName && categoryName !== "all" && (
           <>
-            <span className="mx-2">{"/ "}</span>
-            <span className="font-semibold">{categoryName}</span>
+            <span className="mx-2">{"/"}</span>
+            <span className="font-semibold">
+              {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
+            </span>
           </>
         )}
       </div>
