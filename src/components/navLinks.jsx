@@ -11,14 +11,6 @@ export const headerLinks = [
   { title: "Contact", path: "/contact" },
 ];
 
-export const shopLinks = [
-  { title: "All", path: "all" },
-  { title: "Men", path: "men" },
-  { title: "Women", path: "women" },
-  { title: "Kids", path: "kids" },
-  { title: "Accessories", path: "accessories" },
-];
-
 export const navLinks = [
   {
     title: "About Us",

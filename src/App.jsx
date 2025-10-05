@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./components/home/Home";
 import Header from "./components/Header";
 import SignPage from "./components/signPages/SignPage";
@@ -12,7 +11,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center min-h-[80vh]">
         <div className="container lg:w-[85%] p-[20px] pb-[0]">
           <Routes>
             <Route index path="/" element={<Home />} />

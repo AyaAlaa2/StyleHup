@@ -46,7 +46,7 @@ export default function Products() {
     <div>
       <div className=" text-gray-600 text-md my-10">
         <span className="hover:underline cursor-pointer">
-          <Link to="/Products/all">Shop</Link>
+          <Link to="/Prouducts/All">Shop</Link>
         </span>
         {categoryName && categoryName !== "all" && (
           <>
