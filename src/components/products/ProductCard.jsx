@@ -1,6 +1,12 @@
-export default function ProductCard({ product }) {
+import { Link } from "react-router-dom";
+
+export default function ProductCard({ product, categoryName, itemPage }) {
   return (
-    <a href="#" className="group relative block overflow-hidden">
+    <Link
+      to={`/Products/${categoryName}/${itemPage}`}
+      state={{ product }}
+      className="group relative block overflow-hidden"
+    >
       <button className="absolute end-2 top-2 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
         <span className="sr-only">Wishlist</span>
         <svg
@@ -39,6 +45,6 @@ export default function ProductCard({ product }) {
           Add to Cart
         </button>
       </div>
-    </a>
+    </Link>
   );
 }

@@ -13,3 +13,16 @@ export function useProducts() {
     refetchOnWindowFocus: false,
   });
 }
+
+const fetchProductsReviews = async () => {
+  const res = await axios.get("http://localhost:3000/products_reviews");
+  return res.data;
+};
+
+export function useProductsReviews() {
+  return useQuery({
+    queryKey: ["productsReviews"],
+    queryFn: fetchProductsReviews,
+    refetchOnWindowFocus: false,
+  });
+}

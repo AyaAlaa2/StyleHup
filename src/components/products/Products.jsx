@@ -1,13 +1,12 @@
 import { useProducts } from "../hooks/useProducts";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 
 export default function Products() {
-  const { categoryName } = useParams();
+  const { categoryName, itemPage } = useParams();
   const { data: products, isLoading, isError } = useProducts();
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
 
@@ -44,45 +43,74 @@ export default function Products() {
 
   return (
     <div>
-      <div className=" text-gray-600 text-md my-10">
-        <span className="hover:underline cursor-pointer">
+      <div className="p-[16px]">
+        <span className="hover:underline cursor-pointer text-[16px] font-medium text-[#757575]">
           <Link to="/Products/all">Shop</Link>
         </span>
         {categoryName && categoryName !== "all" && (
           <>
-            <span className="mx-2">{"/"}</span>
-            <span className="font-semibold">
-              {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
+            <span className="mx-2 text-[#757575]">{"/"}</span>
+            <span
+              className={`${
+                itemPage ? "text-[#757575]" : "text-[#141414]"
+              } text-[16px] font-medium hover:underline cursor-pointer`}
+            >
+              <Link to={`/Products/${categoryName}`}>
+                {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
+              </Link>
             </span>
+            {itemPage && (
+              <>
+                <span className="mx-2 text-[#757575]">{"/"}</span>
+                <span className="text-[16px] font-medium text-[#141414]">
+                  {itemPage}
+                </span>
+              </>
+            )}
           </>
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 min-h-[250px]">
-        {currentProducts.length === 0 ? (
-          <p className="col-span-full text-center text-gray-500">
-            No products found.
-          </p>
-        ) : (
-          currentProducts.map((p) => <ProductCard key={p.id} product={p} />)
-        )}
-      </div>
+      <Outlet />
 
-      {totalPages > 1 && (
-        <div className="flex justify-center mt-6 gap-2 bottom-0">
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
-            <button
-              key={num}
-              onClick={() => setCurrentPage(num)}
-              className={`px-3 py-1 rounded-md border ${
-                currentPage === num
-                  ? "!bg-black text-white"
-                  : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-              }`}
-            >
-              {num}
-            </button>
-          ))}
+      {!itemPage && (
+        <div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 min-h-[250px]">
+            {currentProducts.length === 0 ? (
+              <p className="col-span-full text-center text-gray-500">
+                No products found.
+              </p>
+            ) : (
+              currentProducts.map((p) => (
+                <ProductCard
+                  key={p.id}
+                  product={p}
+                  categoryName={categoryName}
+                  itemPage={p.name}
+                />
+              ))
+            )}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center mt-6 gap-2 bottom-0">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (num) => (
+                  <button
+                    key={num}
+                    onClick={() => setCurrentPage(num)}
+                    className={`px-3 py-1 rounded-md border ${
+                      currentPage === num
+                        ? "!bg-black text-white"
+                        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+                    }`}
+                  >
+                    {num}
+                  </button>
+                )
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>
