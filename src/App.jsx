@@ -7,6 +7,7 @@ import About from "./components/about/About";
 import ContactUs from "./components/contactUs/ContactUs";
 import Products from "./components/products/Products";
 import ProductPage from "./components/productPage/ProductPage";
+import Card from "./components/cart/Cart";
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/signin" element={<SignPage />} />
             <Route path="/wishList" element={<Home />} />
-            <Route path="/card" element={<Home />} />
+            <Route path="/cart" element={<Card />} />
             <Route path="/aboutUs" element={<About />} />
           </Routes>
         </div>

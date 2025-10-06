@@ -1,6 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../reducers/cartReducer";
 
 const ProductDetails = ({ product }) => {
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  };
   return (
     <div>
       <div className="px-[16px] pt-[20px] pb-[12px]">
@@ -43,7 +49,10 @@ const ProductDetails = ({ product }) => {
         </div>
       </div>
       <div className="px-[16px] py-[12px] flex gap-[12px] items-center justify-start">
-        <button className="rounded-lg px-[16px] py-[10px] text-[14px] bg-black text-white cursor-pointer font-bold transition leading-[21px]">
+        <button
+          className="rounded-lg px-[16px] py-[10px] text-[14px] bg-black text-white cursor-pointer font-bold transition leading-[21px]"
+          onClick={handleAddToCart}
+        >
           Add to Cart
         </button>
         <button className="rounded-lg px-[16px] py-[10px] text-[14px] bg-[#F2F2F2] text-black cursor-pointer font-bold transition leading-[21px]">

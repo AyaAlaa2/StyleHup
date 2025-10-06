@@ -90,7 +90,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-            <Link to="/card">
+            <Link to="/cart">
               <PiShoppingBagThin className="text-[18px] md:text-[20px] text-[#141414]" />
             </Link>
           </div>
