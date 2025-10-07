@@ -1,6 +1,6 @@
 import Home from "./components/home/Home";
 import Header from "./components/Header";
-import SignPage from "./components/signPages/SignPage";
+import SignPage from "./components/registerPages/SignPage";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import About from "./components/about/About";

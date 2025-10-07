@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -6,11 +5,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/loggedReducer";
+import toast from "react-hot-toast";
 
 const Login = ({ setTab }) => {
-  const [toastMessage, setToastMessage] = useState("");
-  const [toastType, setToastType] = useState("info");
-  const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
   const loginSchema = z.object({
     email: z.email(),
@@ -39,32 +36,15 @@ const Login = ({ setTab }) => {
           email: firebaseUser.email,
         })
       );
-      setToastType("success");
-      setToastMessage("Login Successfully !");
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000);
+      toast.success("Login Successfully !");
     } catch (error) {
       console.error("Error:", error.message);
-      setToastType("error");
-      setToastMessage("Oops ! An Error Occured");
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000);
+      toast.error("Oops , An Error Occured , Tay Again !");
     }
   };
 
   return (
     <div>
-      {showToast && (
-        <div className="toast toast-top toast-center z-50">
-          <div
-            className={`alert ${
-              toastType === "success" ? "alert-success" : "alert-error"
-            }`}
-          >
-            <span>{toastMessage}</span>
-          </div>
-        </div>
-      )}
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="form-control flex flex-col gap-[8px]"

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -6,12 +5,9 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase/firebase";
 import uploadImageToCloudinary from "../cloudinary/uploadImageToCloudinary";
+import toast from "react-hot-toast";
 
 const Signup = ({ setTab }) => {
-  const [toastMessage, setToastMessage] = useState("");
-  const [toastType, setToastType] = useState("info");
-  const [showToast, setShowToast] = useState(false);
-
   const signupSchema = z
     .object({
       username: z
@@ -67,33 +63,16 @@ const Signup = ({ setTab }) => {
         profilePic: imageUrl,
         createdAt: new Date(),
       });
-      setToastType("success");
-      setToastMessage("User created successfully!");
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 4000);
+      toast.success("Account Created Successfully!");
       setTab("login");
     } catch (error) {
       console.error("Error:", error.message);
-      setToastType("error");
-      setToastMessage("Oops ! An Error Occured");
-      setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000);
+      toast.error("Oops ! An Error Occured , Try Again !");
     }
   };
 
   return (
     <div>
-      {showToast && (
-        <div className="toast toast-top toast-center z-50">
-          <div
-            className={`alert ${
-              toastType === "success" ? "alert-success" : "alert-error"
-            }`}
-          >
-            <span>{toastMessage}</span>
-          </div>
-        </div>
-      )}
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="form-control flex flex-col gap-3"
