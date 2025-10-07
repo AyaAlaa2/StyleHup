@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -8,6 +9,8 @@ import uploadImageToCloudinary from "../cloudinary/uploadImageToCloudinary";
 import toast from "react-hot-toast";
 
 const Signup = ({ setTab }) => {
+  const [loading, setLoading] = useState(false);
+
   const signupSchema = z
     .object({
       username: z
@@ -45,6 +48,7 @@ const Signup = ({ setTab }) => {
 
   const onSubmit = async (data) => {
     try {
+      setLoading(true);
       const file = data.image[0];
       const imageUrl = await uploadImageToCloudinary(file);
       7;
@@ -68,6 +72,8 @@ const Signup = ({ setTab }) => {
     } catch (error) {
       console.error("Error:", error.message);
       toast.error("Oops ! An Error Occured , Try Again !");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -154,7 +160,16 @@ const Signup = ({ setTab }) => {
             className="file-input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none"
           />
         </div>
-        <button className="btn bg-black text-white mt-2">Sign Up</button>
+        <button className="btn bg-black text-white mt-2" disabled={loading}>
+          {loading ? (
+            <p>
+              <span>Creating Account </span>
+              <span className="loading loading-dots loading-md"></span>
+            </p>
+          ) : (
+            "Sign Up"
+          )}
+        </button>
       </form>
 
       <div className="flex items-center  justify-center gap-[8px] mt-[32px]">
