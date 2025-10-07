@@ -6,6 +6,7 @@ const ProductImage = ({productImage , productName}) => {
       <img
         src={productImage}
         alt={productName}
+        loading="lazy"
         className="w-full h-[688px] object-cover rounded-lg"
       />
     </div>

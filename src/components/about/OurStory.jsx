@@ -20,6 +20,7 @@ const OurStory = () => {
         <img
           src="/img/About.png"
           className="w-full rounded-lg h-full object-cover"
+          loading="lazy"
         />
       </div>
     </div>

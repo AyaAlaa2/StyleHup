@@ -7,6 +7,7 @@ export default function BlogCard({ Article }) {
       <img
         src={Article.image}
         alt={Article.title}
+        loading="lazy"
         className="w-full h-48 object-cover"
       />
       <div className="p-4">

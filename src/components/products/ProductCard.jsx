@@ -37,6 +37,7 @@ export default function ProductCard({ product, categoryName, itemPage }) {
         <img
           src={product.image}
           alt={product.name}
+          loading="lazy"
           className="w-full aspect-square object-cover transition duration-500 group-hover:scale-105"
         />
         <div className="relative border border-gray-100 bg-white p-4">

@@ -33,7 +33,11 @@ const HomeComponent = ({ title, products }) => {
             className="rounded-xl h-[400px] flex flex-col gap-[16px]"
           >
             <div className="w-full h-[320px]">
-              <img src={item.img} className="rounded-xl h-[320px] w-full" />
+              <img
+                src={item.img}
+                className="rounded-xl h-[320px] w-full"
+                loading="lazy"
+              />
             </div>
             <div>
               <p className="font-medium text-[16px] text-[#141414]">

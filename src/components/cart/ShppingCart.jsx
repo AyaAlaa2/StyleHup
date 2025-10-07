@@ -24,6 +24,7 @@ const ShppingCart = ({ selector, handleRemoveFromCart, handleAddToCart }) => {
                 <div className="w-[56px] h-[56px] bg-gray-200 rounded-lg overflow-hidden">
                   <img
                     src={item.image}
+                    loading="lazy"
                     alt="image"
                     className="object-cover w-full h-full"
                   />

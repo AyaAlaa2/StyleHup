@@ -70,6 +70,7 @@ const ProductReviews = ({ product, currentReview }) => {
                   <img
                     src={review.profile_pic}
                     alt="profile Image"
+                    loading="lazy"
                     className="rounded-full"
                   />
                 </div>

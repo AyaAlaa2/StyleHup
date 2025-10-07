@@ -24,6 +24,7 @@ const Team = () => {
               <img
                 src={member.img}
                 className="w-full h-full rounded-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="flex flex-col items-center justify-center">
