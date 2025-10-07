@@ -37,7 +37,11 @@ const ProductReviews = ({ product, currentReview }) => {
               <progress
                 className="progress w-56"
                 value={product.customer_reviews.ratings_distribution[rate]}
-                max="100"
+                max={
+                  product.customer_reviews.ratings_distribution[rate] > 100
+                    ? 200
+                    : 100
+                }
               ></progress>
               <p className="text-[14px] leading-[21px]">
                 {product.customer_reviews.ratings_distribution[rate] > 100

@@ -34,6 +34,12 @@ const Order = ({ total, subTotal, estimatedTax }) => {
           <p className="text-[14px] leading-[21px] text-[#141414]">${total}</p>
         </div>
       </div>
+
+      <div className="py-[12px] px-[16px]">
+        <button className="px-[20px] h-[48px] rounded-lg bg-black text-white w-full md:w-[480px] text-[16px] font-bold leading-[24px]">
+          Proceed to Checkout
+        </button>
+      </div>
     </div>
   );
 };

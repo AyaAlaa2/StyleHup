@@ -12,7 +12,7 @@ const ShppingCart = ({ selector, handleRemoveFromCart, handleAddToCart }) => {
       <div className="flex flex-col">
         {!selector || !selector.length ? (
           <p className="text-center text-[20px] leading-[28px] font-medium mb-[100px]">
-            Your cart is empty ^_^
+            Your cart is empty
           </p>
         ) : (
           selector.map((item, idx) => (
