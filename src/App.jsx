@@ -9,12 +9,15 @@ import Products from "./components/products/Products";
 import ProductPage from "./components/productPage/ProductPage";
 import Card from "./components/cart/Cart";
 import Blog from "./components/blog/Blog";
+import WishList from "./components/wishList/WishList";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
       <Header />
-      <div className="flex items-center justify-center min-h-[80vh]">
+      <Toaster position="top-center" reverseOrder={false} />
+      <div className="flex items-start justify-center min-h-[50vh]">
         <div className="container lg:w-[85%] p-[20px] pb-[0]">
           <Routes>
             <Route index path="/" element={<Home />} />
@@ -28,7 +31,7 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/signin" element={<SignPage />} />
-            <Route path="/wishList" element={<Home />} />
+            <Route path="/wishList" element={<WishList />} />
             <Route path="/cart" element={<Card />} />
             <Route path="/aboutUs" element={<About />} />
           </Routes>

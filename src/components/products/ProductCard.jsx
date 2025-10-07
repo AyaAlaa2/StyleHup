@@ -1,22 +1,29 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
+import { addToWishlist } from "../reducers/wishListReducer";
+import toast from "react-hot-toast";
 
 export default function ProductCard({ product, categoryName, itemPage }) {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
     dispatch(addToCart(product));
+    toast.success("Added to cart successfully !");
+  };
+
+  const handleAddToWishlist = () => {
+    dispatch(addToWishlist(product));
+    toast.success("Added to wishlist successfully !");
   };
 
   return (
     <div>
-      <Link
-        to={`/Products/${categoryName}/${itemPage}`}
-        state={{ product }}
-        className="group relative block overflow-hidden"
-      >
-        <button className="absolute end-2 top-2 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+      <div className="group relative block overflow-hidden">
+        <button
+          onClick={handleAddToWishlist}
+          className="absolute end-2 top-2 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
+        >
           <span className="sr-only">Wishlist</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,25 +40,27 @@ export default function ProductCard({ product, categoryName, itemPage }) {
             />
           </svg>
         </button>
+        <Link to={`/Products/${categoryName}/${itemPage}`} state={{ product }}>
+          <img
+            src={product.image}
+            alt={product.name}
+            loading="lazy"
+            className="w-full aspect-square object-cover transition duration-500 group-hover:scale-105"
+          />
+          <div className="relative border border-gray-100 bg-white p-4">
+            <h3 className="mt-2 text-sm font-medium text-gray-900 truncate">
+              {product.name}
+            </h3>
+            <p className="text-xs text-gray-600 line-clamp-2">
+              {product.description}
+            </p>
+            <h1 className="mt-1 text-sm font-bold text-gray-700">
+              ${product.price}
+            </h1>
+          </div>
+        </Link>
+      </div>
 
-        <img
-          src={product.image}
-          alt={product.name}
-          loading="lazy"
-          className="w-full aspect-square object-cover transition duration-500 group-hover:scale-105"
-        />
-        <div className="relative border border-gray-100 bg-white p-4">
-          <h3 className="mt-2 text-sm font-medium text-gray-900 truncate">
-            {product.name}
-          </h3>
-          <p className="text-xs text-gray-600 line-clamp-2">
-            {product.description}
-          </p>
-          <h1 className="mt-1 text-sm font-bold text-gray-700">
-            ${product.price}
-          </h1>
-        </div>
-      </Link>
       <button
         className="mt-3 block w-full rounded-sm !bg-black p-2 text-sm text-white cursor-pointer font-medium transition hover:scale-105 duration-500"
         onClick={handleAddToCart}

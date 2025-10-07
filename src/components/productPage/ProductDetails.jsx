@@ -1,11 +1,20 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
+import { addToWishlist } from "../reducers/wishListReducer";
+import toast from "react-hot-toast";
 
 const ProductDetails = ({ product }) => {
   const dispatch = useDispatch();
+
   const handleAddToCart = () => {
     dispatch(addToCart(product));
+    toast.success("Added to cart successfully !");
+  };
+
+  const handleAddToWishlist = () => {
+    dispatch(addToWishlist(product));
+    toast.success("Added to wishlist successfully !");
   };
   return (
     <div>
@@ -55,7 +64,10 @@ const ProductDetails = ({ product }) => {
         >
           Add to Cart
         </button>
-        <button className="rounded-lg px-[16px] py-[10px] text-[14px] bg-[#F2F2F2] text-black cursor-pointer font-bold transition leading-[21px]">
+        <button
+          className="rounded-lg px-[16px] py-[10px] text-[14px] bg-[#F2F2F2] text-black cursor-pointer font-bold transition leading-[21px]"
+          onClick={handleAddToWishlist}
+        >
           Add to Wishlist
         </button>
       </div>

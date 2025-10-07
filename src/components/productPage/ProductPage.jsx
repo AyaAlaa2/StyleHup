@@ -27,7 +27,7 @@ const ProductPage = () => {
     );
 
   return (
-    <div>
+    <div key={product.id}>
       <ProductImage productImage={product.image} productName={product.name} />
       <ProductDetails product={product} />
       <ProductReviews product={product} currentReview={currentReview} />
