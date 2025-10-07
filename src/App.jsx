@@ -8,6 +8,7 @@ import ContactUs from "./components/contactUs/ContactUs";
 import Products from "./components/products/Products";
 import ProductPage from "./components/productPage/ProductPage";
 import Card from "./components/cart/Cart";
+import Blog from "./components/blog/Blog";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
                 <Route path=":itemPage" element={<ProductPage />} />
               </Route>
             </Route>
-            <Route path="/blog" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/signin" element={<SignPage />} />
             <Route path="/wishList" element={<Home />} />

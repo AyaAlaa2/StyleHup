@@ -7,7 +7,7 @@ export const headerLinks = [
   { title: "Shop", path: "#" },
   { title: "New Arrivals", path: "#" },
   { title: "Sale", path: "#" },
-  { title: "Blog", path: "#" },
+  { title: "Blog", path: "/blog" },
   { title: "Contact", path: "/contact" },
 ];
 
