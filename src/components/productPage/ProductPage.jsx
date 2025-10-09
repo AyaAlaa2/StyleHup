@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-
 import { useProductsReviews } from "../hooks/useProducts";
 import ProductImage from "./ProductImage";
 import ProductDetails from "./ProductDetails";

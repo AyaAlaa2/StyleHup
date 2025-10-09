@@ -107,13 +107,13 @@ const Header = () => {
       {menuOpen && (
         <div className="absolute z-50 top-[60px] left-0 w-full bg-white shadow-md md:hidden flex flex-col gap-2 p-4 font-semibold">
           {headerLinks.map((L, index) =>
-            L.Link === "Shop" ? (
+            L.title === "Shop" ? (
               <div key={index} className="flex flex-col gap-1">
                 <button
                   onClick={() => setShopOpen(!shopOpen)}
                   className="flex items-center gap-1 cursor-pointer"
                 >
-                  {L.Link}
+                  {L.title}
                   <HiChevronDown
                     className={`w-4 h-4 transition-transform ${
                       shopOpen ? "rotate-180" : ""
@@ -127,7 +127,7 @@ const Header = () => {
                       (cat, idx) => (
                         <Link
                           key={idx}
-                          to={`/Prouducts/${cat}`}
+                          to={`/Products/${cat.toString().toLowerCase()}`}
                           onClick={closeAll}
                           className="block py-1 px-2 hover:!bg-gray-200 rounded-md"
                         >
@@ -140,7 +140,7 @@ const Header = () => {
               </div>
             ) : (
               <Link key={index} to={L.path} onClick={closeAll} className="py-2">
-                {L.Link}
+                {L.title}
               </Link>
             )
           )}

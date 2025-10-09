@@ -34,7 +34,7 @@ const ShppingCart = ({ selector, handleRemoveFromCart, handleAddToCart }) => {
                     {item.name}
                   </p>
                   <p className="text-[14px] leading-[21px] text-[#757575]">
-                    Size: M
+                    Size: {item.selectedSize}
                   </p>
                 </div>
               </div>

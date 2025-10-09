@@ -1,15 +1,29 @@
+import React, { useState, memo } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
 import { addToWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
+import ModalSelectSize from "../productPage/ModalSelectSize";
 
-export default function ProductCard({ product, categoryName, itemPage }) {
+const ProductCard = ({ product, categoryName, itemPage }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedSize, setSelectedSize] = useState("");
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
+    setIsOpen(true);
+  };
+
+  const handleConfirmAddToCart = () => {
+    if (!selectedSize) {
+      toast.error("Please Select size first !");
+      return;
+    }
+
+    dispatch(addToCart({ ...product, selectedSize }));
     toast.success("Added to cart successfully !");
+    setIsOpen(false);
   };
 
   const handleAddToWishlist = () => {
@@ -67,6 +81,18 @@ export default function ProductCard({ product, categoryName, itemPage }) {
       >
         Add to Cart
       </button>
+
+      {isOpen && (
+        <ModalSelectSize
+          product={product}
+          selectedSize={selectedSize}
+          setSelectedSize={setSelectedSize}
+          setIsOpen={setIsOpen}
+          handleConfirmAddToCart={handleConfirmAddToCart}
+        />
+      )}
     </div>
   );
-}
+};
+
+export default memo(ProductCard);

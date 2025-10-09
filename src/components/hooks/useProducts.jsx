@@ -11,6 +11,7 @@ export function useProducts() {
     queryKey: ["products"],
     queryFn: fetchProducts,
     refetchOnWindowFocus: false,
+    staleTime: 1000 * 30,
   });
 }
 
@@ -24,5 +25,6 @@ export function useProductsReviews() {
     queryKey: ["productsReviews"],
     queryFn: fetchProductsReviews,
     refetchOnWindowFocus: false,
+    staleTime: 1000 * 30,
   });
 }

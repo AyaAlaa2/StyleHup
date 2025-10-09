@@ -1,4 +1,6 @@
-export default function BlogCard({ Article }) {
+import { memo } from "react";
+
+const BlogCard = ({ Article }) => {
   return (
     <div
       key={Article.id}
@@ -19,4 +21,6 @@ export default function BlogCard({ Article }) {
       </div>
     </div>
   );
-}
+};
+
+export default memo(BlogCard);

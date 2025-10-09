@@ -1,8 +1,9 @@
 import { useProducts } from "../hooks/useProducts";
 import { Outlet, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
+import Pagination from "../Pagination.jsx";
 
 export default function Products() {
   const { categoryName, itemPage } = useParams();
@@ -14,6 +15,14 @@ export default function Products() {
     setCurrentPage(1);
   }, [categoryName]);
 
+  const filteredProducts = useMemo(() => {
+    if (!products) return [];
+    return !categoryName || categoryName === "all"
+      ? products
+      : products.filter((item) => item.category.toString().toLowerCase() === categoryName);
+  }, [products, categoryName]);
+
+  // Loading and Error States
   if (isLoading)
     return (
       <div className="min-h-[200px] w-full flex items-center justify-center">
@@ -26,11 +35,6 @@ export default function Products() {
         <p className="text-center text-3xl">Oops ! An Error Occured</p>
       </div>
     );
-
-  const filteredProducts =
-    categoryName && categoryName === "all"
-      ? products
-      : products.filter((item) => item.category.toLowerCase() === categoryName);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -92,25 +96,11 @@ export default function Products() {
             )}
           </div>
 
-          {totalPages > 1 && (
-            <div className="flex justify-center mt-6 gap-2 bottom-0">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                (num) => (
-                  <button
-                    key={num}
-                    onClick={() => setCurrentPage(num)}
-                    className={`px-3 py-1 rounded-md border ${
-                      currentPage === num
-                        ? "!bg-black text-white"
-                        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
-                    }`}
-                  >
-                    {num}
-                  </button>
-                )
-              )}
-            </div>
-          )}
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       )}
     </div>

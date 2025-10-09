@@ -11,6 +11,7 @@ import Card from "./components/cart/Cart";
 import Blog from "./components/blog/Blog";
 import WishList from "./components/wishList/WishList";
 import { Toaster } from "react-hot-toast";
+import FAQ from "./components/FAQ";
 import ErrorPage from "./components/ErrorPage";
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/wishList" element={<WishList />} />
             <Route path="/cart" element={<Card />} />
             <Route path="/aboutUs" element={<About />} />
+            <Route path="/FAQ" element={<FAQ />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>

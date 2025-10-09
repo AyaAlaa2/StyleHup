@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
 import { addToWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
+import ModalSelectSize from "./ModalSelectSize";
 
 const ProductDetails = ({ product }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedSize, setSelectedSize] = useState("");
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
+    setIsOpen(true);
+  };
+
+  const handleConfirmAddToCart = () => {
+    if (!selectedSize) {
+      toast.error("Please Select Size First !");
+      return;
+    }
+
+    dispatch(addToCart({ ...product, selectedSize }));
     toast.success("Added to cart successfully !");
+    setIsOpen(false);
   };
 
   const handleAddToWishlist = () => {
@@ -71,6 +84,16 @@ const ProductDetails = ({ product }) => {
           Add to Wishlist
         </button>
       </div>
+
+      {isOpen && (
+        <ModalSelectSize
+          product={product}
+          selectedSize={selectedSize}
+          setSelectedSize={setSelectedSize}
+          setIsOpen={setIsOpen}
+          handleConfirmAddToCart={handleConfirmAddToCart}
+        />
+      )}
     </div>
   );
 };

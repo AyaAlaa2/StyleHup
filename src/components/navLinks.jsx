@@ -5,9 +5,9 @@ import { SlSocialInstagram, SlSocialTwitter } from "react-icons/sl";
 export const headerLinks = [
   { title: "Home", path: "/" },
   { title: "Shop", path: "#" },
-  { title: "New Arrivals", path: "#" },
-  { title: "Sale", path: "#" },
   { title: "Blog", path: "/blog" },
+  { title: "About", path: "/aboutUs" },
+  { title: "FAQ", path: "/FAQ" },
   { title: "Contact", path: "/contact" },
 ];
 

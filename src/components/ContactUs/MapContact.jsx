@@ -14,7 +14,7 @@ const MapContact = () => {
     35.91 + (Math.random() - 0.5) * 0.1,
   ];
   return (
-    <div className="w-full h-96 rounded-2xl overflow-hidden shadow overflow-hidden mt-[12px]">
+    <div className="w-full h-96 rounded-2xl shadow overflow-hidden mt-[12px]">
       <MapContainer
         center={randomPosition}
         zoom={8}

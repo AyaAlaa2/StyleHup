@@ -6,7 +6,7 @@ const ProductReviews = ({ product, currentReview }) => {
   const stars = [1, 2, 3, 4, 5];
   const reviewRating = [5, 4, 3, 2, 1];
   return (
-    <div>
+    <div key={product.id}>
       <div className="px-[16px] pt-[16px] pb-[8px]">
         <p className="font-bold text-[18px] leading-[23px]">Customer Reviews</p>
       </div>
@@ -85,8 +85,8 @@ const ProductReviews = ({ product, currentReview }) => {
               </div>
             </div>
             <div className="flex text-[20px] gap-[2px]">
-              {stars.map((star) =>
-                review.rating >= star ? <FaStar /> : <CiStar />
+              {stars.map((star , idx) =>
+                review.rating >= star ? <FaStar key={idx}/> : <CiStar key={idx}/>
               )}
             </div>
             <p className="font-normal text-[16px] leading-[24px]">
