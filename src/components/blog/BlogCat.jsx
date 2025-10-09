@@ -1,6 +1,6 @@
-export default function BlogCat({ categories, categoryName, setCategoryName }) {
+const BlogCat = ({ categories, categoryName, setCategoryName }) => {
   return (
-    <div>
+    <div className="flex gap-[16px] mb-10 flex-wrap">
       {categories.map((cat, index) => (
         <button
           key={index}
@@ -16,4 +16,5 @@ export default function BlogCat({ categories, categoryName, setCategoryName }) {
       ))}
     </div>
   );
-}
+};
+export default BlogCat;

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Order = ({ total, subTotal, estimatedTax }) => {
+
   return (
     <div>
       <div className="p-[16px]">

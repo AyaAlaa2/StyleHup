@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const HeaderOfSection = ({ title }) => {
   return (
@@ -10,4 +10,4 @@ const HeaderOfSection = ({ title }) => {
   );
 };
 
-export default HeaderOfSection;
+export default memo(HeaderOfSection);

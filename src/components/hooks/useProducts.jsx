@@ -15,6 +15,20 @@ export function useProducts() {
   });
 }
 
+const fetchProduct = async (id) => {
+  const res = await axios.get(`http://localhost:3000/Products/${id}`);
+  return res.data;
+};
+
+export function useProduct(id) {
+  return useQuery({
+    queryKey: ["product", id],
+    queryFn: () => fetchProduct(id),
+    enabled: !!id,
+    refetchOnWindowFocus: false,
+  });
+}
+
 const fetchProductsReviews = async () => {
   const res = await axios.get("http://localhost:3000/products_reviews");
   return res.data;

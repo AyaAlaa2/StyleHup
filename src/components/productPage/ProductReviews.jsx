@@ -85,8 +85,12 @@ const ProductReviews = ({ product, currentReview }) => {
               </div>
             </div>
             <div className="flex text-[20px] gap-[2px]">
-              {stars.map((star , idx) =>
-                review.rating >= star ? <FaStar key={idx}/> : <CiStar key={idx}/>
+              {stars.map((star, idx) =>
+                review.rating >= star ? (
+                  <FaStar key={idx} />
+                ) : (
+                  <CiStar key={idx} />
+                )
               )}
             </div>
             <p className="font-normal text-[16px] leading-[24px]">

@@ -54,7 +54,9 @@ const ProductCard = ({ product, categoryName, itemPage }) => {
             />
           </svg>
         </button>
-        <Link to={`/Products/${categoryName}/${itemPage}`} state={{ product }}>
+        <Link
+          to={`/Products/${categoryName}/${itemPage}-${product.id}`}
+        >
           <img
             src={product.image}
             alt={product.name}

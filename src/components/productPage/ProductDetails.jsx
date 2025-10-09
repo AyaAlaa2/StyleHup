@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
 import { addToWishlist } from "../reducers/wishListReducer";
@@ -10,11 +10,11 @@ const ProductDetails = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState("");
   const dispatch = useDispatch();
 
-  const handleAddToCart = () => {
+  const handleAddToCart = useCallback(() => {
     setIsOpen(true);
-  };
+  }, []);
 
-  const handleConfirmAddToCart = () => {
+  const handleConfirmAddToCart = useCallback(() => {
     if (!selectedSize) {
       toast.error("Please Select Size First !");
       return;
@@ -23,12 +23,13 @@ const ProductDetails = ({ product }) => {
     dispatch(addToCart({ ...product, selectedSize }));
     toast.success("Added to cart successfully !");
     setIsOpen(false);
-  };
+  }, [dispatch, product, selectedSize]);
 
-  const handleAddToWishlist = () => {
+  const handleAddToWishlist = useCallback(() => {
     dispatch(addToWishlist(product));
     toast.success("Added to wishlist successfully !");
-  };
+  }, [dispatch, product]);
+
   return (
     <div>
       <div className="px-[16px] pt-[20px] pb-[12px]">
@@ -85,7 +86,7 @@ const ProductDetails = ({ product }) => {
         </button>
       </div>
 
-      {isOpen && (
+      {isOpen && product && (
         <ModalSelectSize
           product={product}
           selectedSize={selectedSize}

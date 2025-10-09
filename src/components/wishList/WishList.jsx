@@ -1,17 +1,20 @@
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Pagination from "../Pagination.jsx";
 import WishlistCard from "./WishlistCard.jsx";
 export default function Wishlist() {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
 
-  const handleDelete = (id) => {
-    dispatch(removeFromWishlist(id));
-    toast.error("product removed from wishlist");
-  };
+  const handleDelete = useCallback(
+    (id) => {
+      dispatch(removeFromWishlist(id));
+      toast.error("product removed from wishlist");
+    },
+    [dispatch]
+  );
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;

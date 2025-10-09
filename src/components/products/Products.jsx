@@ -4,9 +4,11 @@ import { useState, useEffect, useMemo } from "react";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 import Pagination from "../Pagination.jsx";
+import ProductCat from "./ProductCat.jsx";
 
-export default function Products() {
+const Products = () => {
   const { categoryName, itemPage } = useParams();
+  const nameOfProduct = itemPage?.split("-").slice(0, -1).join("");
   const { data: products, isLoading, isError } = useProducts();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
@@ -19,7 +21,9 @@ export default function Products() {
     if (!products) return [];
     return !categoryName || categoryName === "all"
       ? products
-      : products.filter((item) => item.category.toString().toLowerCase() === categoryName);
+      : products.filter(
+          (item) => item.category.toString().toLowerCase() === categoryName
+        );
   }, [products, categoryName]);
 
   // Loading and Error States
@@ -47,33 +51,11 @@ export default function Products() {
 
   return (
     <div>
-      <div className="p-[16px]">
-        <span className="hover:underline cursor-pointer text-[16px] font-medium text-[#757575]">
-          <Link to="/Products/all">Shop</Link>
-        </span>
-        {categoryName && categoryName !== "all" && (
-          <>
-            <span className="mx-2 text-[#757575]">{"/"}</span>
-            <span
-              className={`${
-                itemPage ? "text-[#757575]" : "text-[#141414]"
-              } text-[16px] font-medium hover:underline cursor-pointer`}
-            >
-              <Link to={`/Products/${categoryName}`}>
-                {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
-              </Link>
-            </span>
-            {itemPage && (
-              <>
-                <span className="mx-2 text-[#757575]">{"/"}</span>
-                <span className="text-[16px] font-medium text-[#141414]">
-                  {itemPage}
-                </span>
-              </>
-            )}
-          </>
-        )}
-      </div>
+      <ProductCat
+        categoryName={categoryName}
+        itemPage={itemPage}
+        nameOfProduct={nameOfProduct}
+      />
 
       <Outlet />
 
@@ -105,4 +87,6 @@ export default function Products() {
       )}
     </div>
   );
-}
+};
+
+export default Products;

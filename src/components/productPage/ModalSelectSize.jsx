@@ -42,7 +42,10 @@ const ModalSelectSize = ({
         </div>
 
         <div className="modal-action">
-          <button className="btn btn-success" onClick={handleConfirmAddToCart}>
+          <button
+            className="btn btn-success text-white"
+            onClick={handleConfirmAddToCart}
+          >
             Done
           </button>
           <button className="btn" onClick={() => setIsOpen(false)}>

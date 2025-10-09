@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const ProductImage = ({productImage , productName}) => {
+const ProductImage = ({ productImage, productName }) => {
   return (
     <div className="p-[16px]">
       <img
@@ -11,6 +11,6 @@ const ProductImage = ({productImage , productName}) => {
       />
     </div>
   );
-}
+};
 
-export default ProductImage
+export default ProductImage;

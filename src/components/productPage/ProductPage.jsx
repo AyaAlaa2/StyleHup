@@ -1,24 +1,36 @@
-import { useLocation } from "react-router-dom";
-import { useProductsReviews } from "../hooks/useProducts";
+import { useMemo } from "react";
+import { useParams } from "react-router-dom";
+import { useProduct, useProductsReviews } from "../hooks/useProducts";
 import ProductImage from "./ProductImage";
 import ProductDetails from "./ProductDetails";
 import ProductReviews from "./ProductReviews";
 
 const ProductPage = () => {
-  const location = useLocation();
-  const { product } = location.state || {};
-  const { data: productsReviews, isLoading, isError } = useProductsReviews();
+  const { itemPage } = useParams();
+  const id = Number(itemPage.split("-").pop());
 
-  const currentReview =
-    productsReviews?.find((review) => review.id === product?.id)?.reviews || [];
+  const {
+    data: productsReviews,
+    isLoading: isLoadingReviews,
+    isError: isErrorReviews,
+  } = useProductsReviews();
 
-  if (isLoading)
+  const { data: product, isLoading, isError } = useProduct(id);
+
+  const currentReview = useMemo(() => {
+    return (
+      productsReviews?.find((review) => review.id === product?.id)?.reviews ||
+      []
+    );
+  }, [productsReviews, product]);
+
+  if (isLoading || isLoadingReviews)
     return (
       <div className="min-h-[200px] w-full flex items-center justify-center">
         <span className="loading loading-spinner loading-xl "></span>
       </div>
     );
-  if (isError)
+  if (isError || isErrorReviews)
     return (
       <div className="min-h-[200px] w-full flex items-center justify-center">
         <p className="text-center text-3xl">Oops ! An Error Occured</p>

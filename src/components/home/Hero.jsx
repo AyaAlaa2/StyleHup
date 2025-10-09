@@ -1,6 +1,7 @@
 import React from "react";
 
 const Hero = () => {
+
   return (
     <div className="w-[100%] h-[80vh] rounded-2xl overflow-hidden p-[16px]">
       <div className="w-[100%] h-[100%] bg-[url(/img/Hero.png)] bg-no-repeat bg-center bg-cover rounded-xl">
