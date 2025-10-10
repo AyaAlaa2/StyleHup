@@ -21,13 +21,18 @@ const ProductCard = ({ product, categoryName, itemPage }) => {
       return;
     }
 
-    dispatch(addToCart({ ...product, selectedSize }));
+    dispatch(
+      addToCart({
+        product: { ...product, selectedSize, inCard: true },
+        selectedSize,
+      })
+    );
     toast.success("Added to cart successfully !");
     setIsOpen(false);
   };
 
   const handleAddToWishlist = () => {
-    dispatch(addToWishlist(product));
+    dispatch(addToWishlist({ ...product, inWishlist: true }));
     toast.success("Added to wishlist successfully !");
   };
 
@@ -54,9 +59,7 @@ const ProductCard = ({ product, categoryName, itemPage }) => {
             />
           </svg>
         </button>
-        <Link
-          to={`/Products/${categoryName}/${itemPage}-${product.id}`}
-        >
+        <Link to={`/Products/${categoryName}/${itemPage}-${product.id}`}>
           <img
             src={product.image}
             alt={product.name}

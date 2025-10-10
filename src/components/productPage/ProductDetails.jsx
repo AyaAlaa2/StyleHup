@@ -20,13 +20,18 @@ const ProductDetails = ({ product }) => {
       return;
     }
 
-    dispatch(addToCart({ ...product, selectedSize }));
+    dispatch(
+      addToCart({
+        product: { ...product, selectedSize, inCard: true },
+        selectedSize: selectedSize,
+      })
+    );
     toast.success("Added to cart successfully !");
     setIsOpen(false);
   }, [dispatch, product, selectedSize]);
 
   const handleAddToWishlist = useCallback(() => {
-    dispatch(addToWishlist(product));
+    dispatch(addToWishlist({ ...product, inWishlist: true }));
     toast.success("Added to wishlist successfully !");
   }, [dispatch, product]);
 

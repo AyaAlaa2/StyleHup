@@ -11,7 +11,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const handleAddToCart = useCallback(
     (item) => {
-      dispatch(addToCart(item));
+      dispatch(addToCart({ product: item, selectedSize: item.selectedSize }));
       toast.success("Added to cart successfully !");
     },
     [dispatch]
@@ -19,7 +19,9 @@ const Cart = () => {
 
   const handleRemoveFromCart = useCallback(
     (item) => {
-      dispatch(removeOneFromCart(item));
+      dispatch(
+        removeOneFromCart({ product: item, selectedSize: item.selectedSize })
+      );
       toast.error("Product removed from cart !");
     },
     [dispatch]
