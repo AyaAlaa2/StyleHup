@@ -2,7 +2,8 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebase";
+import { auth, db } from "../firebase/firebase";
+import { doc, getDoc } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/loggedReducer";
 import toast from "react-hot-toast";
@@ -29,11 +30,15 @@ const Login = ({ setTab }) => {
         data.email,
         data.password
       );
-      const firebaseUser = userCredential.user;
+      const user = userCredential.user;
+
+      const userDocSnap = (await getDoc(doc(db, "users", user.uid))).data();
       dispatch(
         login({
-          uid: firebaseUser.uid,
-          email: firebaseUser.email,
+          uid: user.uid,
+          email: user.email,
+          profilePic: userDocSnap.profilePic,
+          username: userDocSnap.username,
         })
       );
       toast.success("Login Successfully !");

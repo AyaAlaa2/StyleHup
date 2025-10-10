@@ -64,6 +64,7 @@ const Signup = ({ setTab }) => {
         uid: user.uid,
         username: data.username,
         email: data.email,
+        role: "user", 
         profilePic: imageUrl,
         createdAt: new Date(),
       });
