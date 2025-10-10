@@ -10,9 +10,10 @@ import ProductPage from "./components/productPage/ProductPage";
 import Card from "./components/cart/Cart";
 import Blog from "./components/blog/Blog";
 import WishList from "./components/wishList/WishList";
-import { Toaster } from "react-hot-toast";
 import FAQ from "./components/FAQ";
 import ErrorPage from "./components/ErrorPage";
+import SearchResult from "./components/SearchResult";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -23,13 +24,13 @@ const App = () => {
         <div className="container lg:w-[85%] p-[20px] pb-[0]">
           <Routes>
             <Route index path="/" element={<Home />} />
-            <Route path="/new" element={<Home />} />
             <Route path="/Products">
               <Route index element={<Products />} />
               <Route path=":categoryName" element={<Products />}>
                 <Route path=":itemPage" element={<ProductPage />} />
               </Route>
             </Route>
+            <Route path="/Search/:query" element={<SearchResult />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/signin" element={<SignPage />} />

@@ -7,6 +7,7 @@ import { GoHeart, GoPerson } from "react-icons/go";
 import { PiShoppingBagThin } from "react-icons/pi";
 import { HiChevronDown } from "react-icons/hi";
 import { useSelector } from "react-redux";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,14 +72,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-3 md:gap-[32px]">
-        <label className="hidden md:flex bg-[#F2F2F2] rounded-lg ps-[12px] items-center">
-          <CiSearch className="text-[22px] text-[#757575]" />
-          <input
-            type="search"
-            placeholder="Search"
-            className="py-[6px] ps-[12px] pe-[8px] text-[14px] md:text-[16px] text-[#757575] focus:outline-none"
-          />
-        </label>
+        <SearchBar />
 
         <div className="flex gap-[6px] md:gap-[8px] items-center">
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">

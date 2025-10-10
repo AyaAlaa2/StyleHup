@@ -1,6 +1,7 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 const ErrorPage = () => {
   const navigate = useNavigate();
@@ -18,14 +19,7 @@ const ErrorPage = () => {
         </p>
       </div>
       <div className="py-[12px] w-full">
-        <label className="flex bg-[#F2F2F2] border-[#F2F2F2] items-center justify-center px-[16px]">
-          <IoSearchOutline className="text-[#757575] text-[24px]" />
-          <input
-            type="search"
-            placeholder="Search  for products"
-            className="w-full rounded text-[16px] py-[12px] px-[8px] focus:outline-none text-[#757575]"
-          />
-        </label>
+        <SearchBar />
       </div>
       <div className="flex items-center justify-center px-[12px] gap-[12px] pt-[12px]">
         <button
