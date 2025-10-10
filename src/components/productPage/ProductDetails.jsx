@@ -27,6 +27,7 @@ const ProductDetails = ({ product }) => {
       })
     );
     toast.success("Added to cart successfully !");
+    setSelectedSize("");
     setIsOpen(false);
   }, [dispatch, product, selectedSize]);
 
