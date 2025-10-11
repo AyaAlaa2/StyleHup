@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { headerLinks } from "./navLinks";
 import { FaCube, FaBars, FaTimes } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
@@ -13,7 +13,6 @@ import { logout } from "./reducers/loggedReducer";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
-  const navigate = useNavigate();
   const shopLink = ["All", "Men", "Women", "Kids", "Accessories"];
   const selector = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
