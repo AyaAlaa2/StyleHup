@@ -6,7 +6,7 @@ import { addToWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
 import ModalSelectSize from "../productPage/ModalSelectSize";
 
-const ProductCard = ({ product, categoryName, itemPage }) => {
+const ProductCard = ({ product, categoryName }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
   const dispatch = useDispatch();
@@ -59,7 +59,11 @@ const ProductCard = ({ product, categoryName, itemPage }) => {
             />
           </svg>
         </button>
-        <Link to={`/Products/${categoryName}/${itemPage}-${product.id}`}>
+        <Link
+          to={`/Products/${
+            categoryName ? categoryName.toLowerCase() : "all"
+          }/${product.name.replace(/\s+/g, "-")}-${product.id}`}
+        >
           <img
             src={product.image}
             alt={product.name}

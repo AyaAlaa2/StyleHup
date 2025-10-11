@@ -1,23 +1,30 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { headerLinks } from "./navLinks";
 import { FaCube, FaBars, FaTimes } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { GoHeart, GoPerson } from "react-icons/go";
 import { PiShoppingBagThin } from "react-icons/pi";
 import { HiChevronDown } from "react-icons/hi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "./SearchBar";
+import { logout } from "./reducers/loggedReducer";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
+  const navigate = useNavigate();
   const shopLink = ["All", "Men", "Women", "Kids", "Accessories"];
   const selector = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
 
   const closeAll = () => {
     setMenuOpen(false);
     setShopOpen(false);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
   };
 
   return (
@@ -87,21 +94,42 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            {!selector ? (
+            {!selector.uid ? (
               <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
                 <Link to="/signin">
                   <GoPerson className="text-[18px] md:text-[20px] text-[#141414]" />
                 </Link>
               </div>
             ) : (
-              <div class="avatar">
-                <div class="w-10 rounded-full">
-                  <img src={selector.profilePic} />
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="avatar">
+                    <div className="w-10 rounded-full">
+                      <img src={selector.profilePic} />
+                    </div>
+                  </div>
                 </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                >
+                  <li>
+                    <Link to="#">Profile</Link>
+                  </li>
+                  <li>
+                    <Link to="#">Settings</Link>
+                  </li>
+                  <li>
+                    <Link to="#" onClick={handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
               </div>
-              // <Link to="/signin">
-              //   <GoPerson className="text-[18px] md:text-[20px] text-[#141414]" />
-              // </Link>
             )}
           </div>
         </div>

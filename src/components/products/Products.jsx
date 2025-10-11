@@ -8,7 +8,7 @@ import ProductCat from "./ProductCat.jsx";
 
 const Products = () => {
   const { categoryName, itemPage } = useParams();
-  const nameOfProduct = itemPage?.split("-").slice(0, -1).join("");
+  const nameOfProduct = itemPage?.split("-").slice(0, -1).join(" ");
   const { data: products, isLoading, isError } = useProducts();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
