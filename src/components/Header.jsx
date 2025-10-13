@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { headerLinks } from "./navLinks";
 import { FaCube, FaBars, FaTimes } from "react-icons/fa";
 import { GoHeart, GoPerson } from "react-icons/go";
@@ -16,7 +16,6 @@ const Header = () => {
   const selector = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const closeAll = () => {
     setMenuOpen(false);
     setShopOpen(false);
