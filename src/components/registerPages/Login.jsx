@@ -7,9 +7,13 @@ import { doc, getDoc } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 import { login } from "../reducers/loggedReducer";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = ({ setTab }) => {
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const loginSchema = z.object({
     email: z.email(),
     password: z.string().min(8, {
@@ -25,6 +29,7 @@ const Login = ({ setTab }) => {
 
   const onSubmit = async (data) => {
     try {
+      setLoading(true);
       const userCredential = await signInWithEmailAndPassword(
         auth,
         data.email,
@@ -39,12 +44,20 @@ const Login = ({ setTab }) => {
           email: user.email,
           profilePic: userDocSnap.profilePic,
           username: userDocSnap.username,
+          role: userDocSnap.role || "user",
         })
       );
       toast.success("Login Successfully !");
+      if (userDocSnap.role === "admin") {
+        navigate("/admin/dashboard");
+      } else {
+        navigate("/");
+      }
     } catch (error) {
       console.error("Error:", error.message);
       toast.error("Oops , An Error Occured , Tay Again !");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -87,8 +100,18 @@ const Login = ({ setTab }) => {
           )}
         </div>
 
-        <button className="btn bg-black text-white text-[16px] mt-2">
-          Login
+        <button
+          className="btn bg-black text-white text-[16px] mt-2"
+          disabled={loading}
+        >
+          {loading ? (
+            <p>
+              <span>Login </span>
+              <span className="loading loading-dots loading-md"></span>
+            </p>
+          ) : (
+            "Login"
+          )}
         </button>
       </form>
 

@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 const fetchProducts = async () => {
@@ -40,5 +40,24 @@ export function useProductsReviews() {
     queryFn: fetchProductsReviews,
     refetchOnWindowFocus: false,
     staleTime: 1000 * 30,
+  });
+}
+
+const addNewProduct = async (newProduct) => {
+  const res = await axios.post("http://localhost:3000/Products", newProduct);
+  return res.data;
+};
+
+export function useAddProduct() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: addNewProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries(["Products"]);
+    },
+    onError: (error) => {
+      console.error("Error adding product:", error);
+    },
   });
 }

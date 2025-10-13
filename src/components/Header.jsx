@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { headerLinks } from "./navLinks";
 import { FaCube, FaBars, FaTimes } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
 import { GoHeart, GoPerson } from "react-icons/go";
 import { PiShoppingBagThin } from "react-icons/pi";
 import { HiChevronDown } from "react-icons/hi";
@@ -16,6 +15,7 @@ const Header = () => {
   const shopLink = ["All", "Men", "Women", "Kids", "Accessories"];
   const selector = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const closeAll = () => {
     setMenuOpen(false);
@@ -24,6 +24,7 @@ const Header = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+    navigate("/");
   };
 
   return (
