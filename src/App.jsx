@@ -14,8 +14,8 @@ import FAQ from "./components/FAQ";
 import ErrorPage from "./components/ErrorPage";
 import SearchResult from "./components/SearchResult";
 import { Toaster } from "react-hot-toast";
-import Dashboard from "./components/admin/Dashboard";
 import ProtectedAdminRoute from "./components/admin/ProtectedAdminRoute";
+import Dashboard from "./components/admin/dashboard/Dashboard";
 
 const App = () => {
   return (
@@ -50,10 +50,10 @@ const App = () => {
         >
           <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="products" element={<Dashboard />} />
+          {/* <Route path="products" element={<Dashboard />} />
           <Route path="orders" element={<Dashboard />} />
           <Route path="customers" element={<Dashboard />} />
-          <Route path="analytics" element={<Dashboard />} />
+          <Route path="analytics" element={<Dashboard />} /> */}
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
