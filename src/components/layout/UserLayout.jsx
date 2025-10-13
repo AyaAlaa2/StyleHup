@@ -7,7 +7,7 @@ const MainLayout = () => {
     <>
       <Header />
       <div className="flex items-start justify-center min-h-[50vh]">
-        <div className="container lg:w-[85%] p-[20px] pb-[0]">
+        <div className="container lg:w-[85%] p-[20px]">
           <Outlet />
         </div>
       </div>

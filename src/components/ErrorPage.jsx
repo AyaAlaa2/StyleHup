@@ -1,12 +1,11 @@
 import React from "react";
-import { IoSearchOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 const ErrorPage = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center justify-start px-[16px] h-[495px]">
+    <div className="w-[80%] mx-auto flex flex-col items-center justify-center px-[16px] h-[495px]">
       <div className="pt-[16px] pb-[12px]">
         <p className="text-[32px] font-bold leading-[40px] text-[#141414]">
           Page Not Found

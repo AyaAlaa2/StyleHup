@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { headerLinks } from "./navLinks";
 import { FaCube, FaBars, FaTimes } from "react-icons/fa";
 import { GoHeart, GoPerson } from "react-icons/go";
@@ -16,6 +16,8 @@ const Header = () => {
   const selector = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+
   const closeAll = () => {
     setMenuOpen(false);
     setShopOpen(false);
@@ -26,6 +28,19 @@ const Header = () => {
     navigate("/");
   };
 
+  if (location.pathname === "/signin") {
+    return (
+      <header className="navbar justify-between items-center px-4 md:px-[40px] py-[12px] shadow-sm text-black">
+        <Link to="/" className="flex flex-row gap-2 md:gap-[16px] items-center">
+          <FaCube className="text-[18px]" />
+          <p className="font-bold text-[18px] leading-[23px] text-[#141414]">
+            STYLEHUP
+          </p>
+        </Link>
+      </header>
+    );
+  }
+  
   return (
     <header className="navbar justify-between items-center px-4 md:px-[40px] py-[12px] shadow-sm text-black relative">
       <div className="flex items-center gap-4 md:gap-[32px]">
