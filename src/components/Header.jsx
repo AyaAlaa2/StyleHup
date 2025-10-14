@@ -25,7 +25,7 @@ const Header = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/");
+    navigate("/signin");
   };
 
   if (location.pathname === "/signin") {
@@ -40,7 +40,7 @@ const Header = () => {
       </header>
     );
   }
-  
+
   return (
     <header className="navbar justify-between items-center px-4 md:px-[40px] py-[12px] shadow-sm text-black relative">
       <div className="flex items-center gap-4 md:gap-[32px]">

@@ -14,6 +14,7 @@ const Login = ({ setTab }) => {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const loginSchema = z.object({
     email: z.email(),
     password: z.string().min(8, {
@@ -45,9 +46,12 @@ const Login = ({ setTab }) => {
           profilePic: userDocSnap.profilePic,
           username: userDocSnap.username,
           role: userDocSnap.role || "user",
+          cart: user.cart,
+          wishList: user.wishList,
         })
       );
       toast.success("Login Successfully !");
+
       if (userDocSnap.role === "admin") {
         navigate("/admin/dashboard");
       } else {

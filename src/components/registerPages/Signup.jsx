@@ -60,14 +60,21 @@ const Signup = ({ setTab }) => {
       );
       const user = userCredential.user;
 
-      await setDoc(doc(db, "users", user.uid), {
+      const userData = {
         uid: user.uid,
         username: data.username,
         email: data.email,
-        role: "user", 
+        role: "user",
         profilePic: imageUrl,
         createdAt: new Date(),
-      });
+      };
+
+      if (userData.role === "user") {
+        userData.cart = [];
+        userData.wishList = [];
+      }
+
+      await setDoc(doc(db, "users", user.uid), userData);
       toast.success("Account Created Successfully!");
       setTab("login");
     } catch (error) {

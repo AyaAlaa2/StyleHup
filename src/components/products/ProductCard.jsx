@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
 import { addToWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
@@ -9,10 +9,17 @@ import ModalSelectSize from "../productPage/ModalSelectSize";
 const ProductCard = ({ product, categoryName }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const selector = useSelector((state) => state.user);
 
   const handleAddToCart = () => {
-    setIsOpen(true);
+    if (!selector.logged) {
+      toast.error("Please sign in to add items to your cart.");
+      navigate("/signin");
+    } else {
+      setIsOpen(true);
+    }
   };
 
   const handleConfirmAddToCart = () => {

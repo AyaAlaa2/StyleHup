@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import uploadImageToCloudinary from "../../cloudinary/uploadImageToCloudinary";
-import { useAddProduct } from "../../hooks/useProducts";
+import { useAddProduct } from "../../hooks/addProduct";
 import { FaTimes } from "react-icons/fa";
 import toast from "react-hot-toast";
 
@@ -50,6 +50,7 @@ const AddProduct = () => {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(productSchema),
@@ -95,9 +96,11 @@ const AddProduct = () => {
       };
       addProduct(newProduct);
       toast.success("Product added successfully!");
+      reset();
+      setImage(null);
     } catch (err) {
       console.error("Error uploading product:", err);
-      toast.success("Error uploading product");
+      toast.error("Error uploading product");
     } finally {
       setLoading(false);
     }

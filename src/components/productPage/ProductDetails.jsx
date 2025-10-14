@@ -1,18 +1,26 @@
 import React, { useCallback, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../reducers/cartReducer";
 import { addToWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
 import ModalSelectSize from "./ModalSelectSize";
+import { useNavigate } from "react-router-dom";
 
 const ProductDetails = ({ product }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
   const dispatch = useDispatch();
+  const selector = useSelector((state) => state.user);
+  const navigate = useNavigate();
 
   const handleAddToCart = useCallback(() => {
-    setIsOpen(true);
-  }, []);
+    if (!selector.logged) {
+      toast.error("Please sign in to add items to your cart.");
+      navigate("/signin");
+    } else {
+      setIsOpen(true);
+    }
+  }, [selector.logged, navigate]);
 
   const handleConfirmAddToCart = useCallback(() => {
     if (!selectedSize) {
