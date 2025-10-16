@@ -1,48 +1,18 @@
-import React, { useCallback, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../reducers/cartReducer";
-import { addToWishlist } from "../reducers/wishListReducer";
-import toast from "react-hot-toast";
+import React from "react";
 import ModalSelectSize from "./ModalSelectSize";
-import { useNavigate } from "react-router-dom";
+import { useCartAndWishlist } from "../hooks/useCartAndWishlist";
 
 const ProductDetails = ({ product }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedSize, setSelectedSize] = useState("");
-  const dispatch = useDispatch();
-  const selector = useSelector((state) => state.user);
-  const navigate = useNavigate();
-
-  const handleAddToCart = useCallback(() => {
-    if (!selector.logged) {
-      toast.error("Please sign in to add items to your cart.");
-      navigate("/signin");
-    } else {
-      setIsOpen(true);
-    }
-  }, [selector.logged, navigate]);
-
-  const handleConfirmAddToCart = useCallback(() => {
-    if (!selectedSize) {
-      toast.error("Please Select Size First !");
-      return;
-    }
-
-    dispatch(
-      addToCart({
-        product: { ...product, selectedSize, inCard: true },
-        selectedSize: selectedSize,
-      })
-    );
-    toast.success("Added to cart successfully !");
-    setSelectedSize("");
-    setIsOpen(false);
-  }, [dispatch, product, selectedSize]);
-
-  const handleAddToWishlist = useCallback(() => {
-    dispatch(addToWishlist({ ...product, inWishlist: true }));
-    toast.success("Added to wishlist successfully !");
-  }, [dispatch, product]);
+  const {
+    requireLogin,
+    addProductToCart,
+    addProductToWishlist,
+    loading,
+    isOpen,
+    setIsOpen,
+    selectedSize,
+    setSelectedSize,
+  } = useCartAndWishlist();
 
   return (
     <div>
@@ -88,25 +58,26 @@ const ProductDetails = ({ product }) => {
       <div className="px-[16px] py-[12px] flex gap-[12px] items-center justify-start">
         <button
           className="rounded-lg px-[16px] py-[10px] text-[14px] bg-black text-white cursor-pointer font-bold transition leading-[21px]"
-          onClick={handleAddToCart}
+          onClick={() => requireLogin(() => setIsOpen(true))}
         >
           Add to Cart
         </button>
         <button
           className="rounded-lg px-[16px] py-[10px] text-[14px] bg-[#F2F2F2] text-black cursor-pointer font-bold transition leading-[21px]"
-          onClick={handleAddToWishlist}
+          onClick={() => addProductToWishlist(product)}
         >
           Add to Wishlist
         </button>
       </div>
 
-      {isOpen && product && (
+      {isOpen && (
         <ModalSelectSize
           product={product}
           selectedSize={selectedSize}
           setSelectedSize={setSelectedSize}
           setIsOpen={setIsOpen}
-          handleConfirmAddToCart={handleConfirmAddToCart}
+          handleConfirmAddToCart={() => addProductToCart(product, selectedSize)}
+          loading={loading}
         />
       )}
     </div>

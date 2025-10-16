@@ -1,53 +1,25 @@
-import React, { useState, memo } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../reducers/cartReducer";
-import { addToWishlist } from "../reducers/wishListReducer";
-import toast from "react-hot-toast";
+import React, { memo } from "react";
+import { Link } from "react-router-dom";
 import ModalSelectSize from "../productPage/ModalSelectSize";
+import { useCartAndWishlist } from "../hooks/useCartAndWishlist";
 
 const ProductCard = ({ product, categoryName }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedSize, setSelectedSize] = useState("");
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const selector = useSelector((state) => state.user);
-
-  const handleAddToCart = () => {
-    if (!selector.logged) {
-      toast.error("Please sign in to add items to your cart.");
-      navigate("/signin");
-    } else {
-      setIsOpen(true);
-    }
-  };
-
-  const handleConfirmAddToCart = () => {
-    if (!selectedSize) {
-      toast.error("Please Select size first !");
-      return;
-    }
-
-    dispatch(
-      addToCart({
-        product: { ...product, selectedSize, inCard: true },
-        selectedSize,
-      })
-    );
-    toast.success("Added to cart successfully !");
-    setIsOpen(false);
-  };
-
-  const handleAddToWishlist = () => {
-    dispatch(addToWishlist({ ...product, inWishlist: true }));
-    toast.success("Added to wishlist successfully !");
-  };
+  const {
+    requireLogin,
+    addProductToCart,
+    addProductToWishlist,
+    loading,
+    isOpen,
+    setIsOpen,
+    selectedSize,
+    setSelectedSize,
+  } = useCartAndWishlist();
 
   return (
     <div>
       <div className="group relative block overflow-hidden">
         <button
-          onClick={handleAddToWishlist}
+          onClick={addProductToWishlist}
           className="absolute end-2 top-2 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
         >
           <span className="sr-only">Wishlist</span>
@@ -93,7 +65,7 @@ const ProductCard = ({ product, categoryName }) => {
 
       <button
         className="mt-3 block w-full rounded-sm !bg-black p-2 text-sm text-white cursor-pointer font-medium transition hover:scale-105 duration-500"
-        onClick={handleAddToCart}
+        onClick={() => requireLogin(() => setIsOpen(true))}
       >
         Add to Cart
       </button>
@@ -104,7 +76,8 @@ const ProductCard = ({ product, categoryName }) => {
           selectedSize={selectedSize}
           setSelectedSize={setSelectedSize}
           setIsOpen={setIsOpen}
-          handleConfirmAddToCart={handleConfirmAddToCart}
+          handleConfirmAddToCart={() => addProductToCart(product, selectedSize)}
+          loading={loading}
         />
       )}
     </div>

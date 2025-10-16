@@ -6,6 +6,7 @@ const ModalSelectSize = ({
   setSelectedSize,
   setIsOpen,
   handleConfirmAddToCart,
+  loading,
 }) => {
   return (
     <dialog open className="modal modal-bottom sm:modal-middle">
@@ -43,10 +44,15 @@ const ModalSelectSize = ({
 
         <div className="modal-action">
           <button
-            className="btn btn-success text-white"
+            className="btn btn-success text-white "
+            disabled={loading}
             onClick={handleConfirmAddToCart}
           >
-            Done
+            {loading ? (
+              <span className="loading loading-dots loading-lg "></span>
+            ) : (
+              <span>Done</span>
+            )}
           </button>
           <button className="btn" onClick={() => setIsOpen(false)}>
             Cancle

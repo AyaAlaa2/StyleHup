@@ -8,7 +8,9 @@ import {
   curatedProduct,
 } from "./homeProducts";
 
+
 const Home = () => {
+
   return (
     <div>
       <Hero />

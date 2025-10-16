@@ -2,7 +2,11 @@ import React from "react";
 import { FiPlus } from "react-icons/fi";
 import { FiMinus } from "react-icons/fi";
 
-const ShppingCart = ({ selector, handleRemoveFromCart, handleAddToCart }) => {
+const ShppingCart = ({
+  cartFirebase,
+  handleRemoveFromCart,
+  handleAddToCart,
+}) => {
   return (
     <div>
       <div className="p-[16px]">
@@ -10,12 +14,12 @@ const ShppingCart = ({ selector, handleRemoveFromCart, handleAddToCart }) => {
       </div>
 
       <div className="flex flex-col">
-        {!selector || !selector.length ? (
+        {!cartFirebase || !cartFirebase.length ? (
           <p className="text-center text-[20px] leading-[28px] font-medium mb-[100px]">
             Your cart is empty
           </p>
         ) : (
-          selector.map((item, idx) => (
+          cartFirebase.map((item, idx) => (
             <div
               key={idx}
               className="py-[8px] px-[16px] flex justify-between items-center"

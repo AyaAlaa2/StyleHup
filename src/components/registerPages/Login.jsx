@@ -46,8 +46,8 @@ const Login = ({ setTab }) => {
           profilePic: userDocSnap.profilePic,
           username: userDocSnap.username,
           role: userDocSnap.role || "user",
-          cart: user.cart,
-          wishList: user.wishList,
+          cart: user.cart || [],
+          wishList: user.wishList || [],
         })
       );
       toast.success("Login Successfully !");
@@ -57,8 +57,7 @@ const Login = ({ setTab }) => {
       } else {
         navigate("/");
       }
-    } catch (error) {
-      console.error("Error:", error.message);
+    } catch {
       toast.error("Oops , An Error Occured , Tay Again !");
     } finally {
       setLoading(false);

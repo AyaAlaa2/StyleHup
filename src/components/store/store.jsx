@@ -11,8 +11,15 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import loggedReducer from "../reducers/loggedReducer";
-import cartReducer from "../reducers/cartReducer";
 import wishlistReducer from "../reducers/wishListReducer";
+
+const rootReducer = (state, action) => {
+  if (action.type === "logged/logout") {
+    storage.removeItem("persist:root");
+    state = undefined;
+  }
+  return appReducer(state, action);
+};
 
 const persistConfig = {
   key: "root",
@@ -20,9 +27,8 @@ const persistConfig = {
   whitelist: ["user"],
 };
 
-const rootReducer = combineReducers({
+const appReducer = combineReducers({
   user: loggedReducer,
-  cart: cartReducer,
   wishlist: wishlistReducer,
 });
 

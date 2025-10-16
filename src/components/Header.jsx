@@ -8,6 +8,9 @@ import { HiChevronDown } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "./SearchBar";
 import { logout } from "./reducers/loggedReducer";
+import { persistor } from "../components/store/store";
+import { signOut } from "firebase/auth";
+import { auth } from "../components/firebase/firebase";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,6 +28,8 @@ const Header = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+    persistor.purge();
+    signOut(auth);
     navigate("/signin");
   };
 
