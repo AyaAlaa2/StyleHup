@@ -19,7 +19,7 @@ const AdminSidebar = () => {
                 onClick={() => setCurrentPage(item.name)}
                 key={item.name}
                 to={item.path}
-                className={`flex items-center py-[8px] px-[12px] rounded-lg hover:bg-gray-100 hover:text-black transition-colors flex gap-[12px]
+                className={` items-center py-[8px] px-[12px] rounded-lg hover:bg-gray-100 hover:text-black transition-colors flex gap-[12px]
                   ${currentPage == item.name ? "bg-[#F0F2F5] text-black" : ""}
                 `}
               >

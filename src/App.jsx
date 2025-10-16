@@ -19,7 +19,8 @@ import ProtectedAdminRoute from "./components/admin/ProtectedAdminRoute";
 import Dashboard from "./components/admin/dashboard/Dashboard";
 import ScrollToTop from "./components/ScrollToTop";
 import Edit from "./components/admin/products/Edit";
-
+import  Customer  from "./components/admin/Customer/Customer";
+import CustomerDetalis from "./components/admin/Customer/CustomerDetalis";
 const App = () => {
   return (
     <>
@@ -59,7 +60,9 @@ const App = () => {
             <Route path=":itemPage/edit" element={<Edit />} />
           </Route>
           <Route path="orders" element={<Dashboard />} />
-          <Route path="customers" element={<Dashboard />} />
+          <Route path="customers" element={<Customer />} />
+          <Route path="customers/:customerName" element={<CustomerDetalis />} />
+
           <Route path="analytics" element={<Dashboard />} />
         </Route>
 
