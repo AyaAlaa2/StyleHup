@@ -1,0 +1,106 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+export default function EditForm({
+  handleImageChange,
+  handleSubmit,
+  preview,
+  onSubmit,
+  register,
+  errors,
+}) {
+  const navigate = useNavigate();
+  return (
+    <div className=" bg-white p-6 my-10">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Edit Product</h1>
+
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-6 w-full md:w-[80%] "
+      >
+        <div className="flex flex-col">
+          <label className="text-lg font-medium mb-1">Product Name</label>
+          <input
+            type="text"
+            {...register("name")}
+            className="border border-gray-400 rounded-md px-4 py-2"
+          />
+          {errors.name && (
+            <span className="text-red-500 text-sm">{errors.name.message}</span>
+          )}
+        </div>
+
+        <div className="flex flex-col">
+          <label className="text-lg font-medium mb-1">Price</label>
+          <input
+            type="number"
+            {...register("price")}
+            className="border border-gray-400 rounded-md px-4 py-2"
+          />
+          {errors.price && (
+            <span className="text-red-500 text-sm">{errors.price.message}</span>
+          )}
+        </div>
+        <div className="flex flex-col">
+          <label className="text-lg font-medium mb-1">Description</label>
+          <textarea
+            rows="3"
+            {...register("description")}
+            className="border border-gray-400 rounded-md px-4 py-2 resize-none"
+          ></textarea>
+          {errors.description && (
+            <span className="text-red-500 text-sm">
+              {errors.description.message}
+            </span>
+          )}
+        </div>
+        <div className="flex flex-col">
+          <label className="text-lg font-medium mb-1">Category</label>
+          <input
+            type="text"
+            {...register("category")}
+            className="border border-gray-400 rounded-md px-4 py-2"
+          />
+          {errors.category && (
+            <span className="text-red-500 text-sm">
+              {errors.category.message}
+            </span>
+          )}
+        </div>
+
+        <div className="flex flex-col">
+          <label className="text-lg font-medium mb-1">Image</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="border border-gray-400 rounded-md px-4 py-2 bg-white"
+          />
+          {preview && (
+            <img
+              src={preview}
+              alt="Preview"
+              className="w-40 h-40 md:w-80 md:h-80 object-cover rounded-md mt-3 "
+            />
+          )}
+        </div>
+
+        <div className="flex justify-start gap-3 pt-4">
+          <button
+            type="submit"
+            className="bg-black text-white px-6 py-2 rounded-md cursor-pointer hover:bg-gray-800"
+          >
+            Save Changes
+          </button>
+          <button
+            type="button"
+            className="bg-red-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-red-700"
+            onClick={() => navigate("/admin/products")}
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+}

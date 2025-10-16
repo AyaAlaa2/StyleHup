@@ -32,7 +32,6 @@ const App = () => {
             <Route index element={<Products />} />
             <Route path=":categoryName" element={<Products />}>
               <Route path=":itemPage" element={<ProductPage />} />
-              <Route path=":itemPage/edit" element={<Edit />} />
             </Route>
           </Route>
           <Route path="/Search/:query" element={<SearchResult />} />
@@ -55,7 +54,10 @@ const App = () => {
         >
           <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="products" element={<ProductsPage />} />
+          <Route path="products">
+            <Route index element={<ProductsPage />} />
+            <Route path=":itemPage/edit" element={<Edit />} />
+          </Route>
           <Route path="orders" element={<Dashboard />} />
           <Route path="customers" element={<Dashboard />} />
           <Route path="analytics" element={<Dashboard />} />

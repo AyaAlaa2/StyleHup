@@ -1,85 +1,21 @@
-import React, { useState } from "react";
-import { useProducts } from "../../hooks/useProducts";
 import { HiChevronDown } from "react-icons/hi";
-import Deletep from "../../hooks/deleteProduct";
-import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const ProductEditDelete = () => {
+export default function ProductTable({
+  filteredProducts,
+  categorySelected,
+  catOpen,
+  setCatOpen,
+  Categorys,
+  handleCategoryChange,
+  priceRangeSelected,
+  priceOpen,
+  setPriceOpen,
+  PriceRanges,
+  handlePriceChange,
+  handelDelete,
+}) {
   const navigate = useNavigate();
-  const { data: products, isLoading, isError } = useProducts();
-  const [categorySelected, setCategorySelected] = useState("All");
-  const [catOpen, setCatOpen] = useState(false);
-  const [priceRangeSelected, setPriceRangeSelected] = useState("All");
-  const [priceOpen, setPriceOpen] = useState(false);
-  const Categorys = ["All", "Men", "Women", "Kids", "Accessories"];
-  const PriceRanges = ["All", "$0-50", "$50-100", "$100-200", "$200+"];
-  const Delete = Deletep();
-  const handelDelete = (id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to undo this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#d33",
-      cancelButtonColor: "#3085d6",
-      confirmButtonText: "Yes, delete it!",
-      cancelButtonText: "Cancel",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Delete.mutate(id);
-        Swal.fire({
-          title: "Deleted!",
-          text: "Product has been deleted.",
-          icon: "success",
-          timer: 1500,
-          showConfirmButton: false,
-        });
-      }
-    });
-  };
-  const handleCategoryChange = (category) => {
-    setCategorySelected(category);
-    setCatOpen(false);
-  };
-
-  const handlePriceChange = (range) => {
-    setPriceRangeSelected(range);
-    setPriceOpen(false);
-  };
-
-  if (isLoading)
-    return (
-      <div className="min-h-[200px] w-full flex items-center justify-center">
-        <span className="loading loading-spinner loading-xl"></span>
-      </div>
-    );
-
-  if (isError)
-    return (
-      <div className="min-h-[200px] w-full flex items-center justify-center">
-        <p className="text-center text-3xl">Oops! An Error Occurred</p>
-      </div>
-    );
-
-  let filteredProducts =
-    categorySelected === "All"
-      ? products
-      : products.filter(
-          (product) =>
-            product.category.toLowerCase() === categorySelected.toLowerCase()
-        );
-
-  filteredProducts = filteredProducts.filter((product) => {
-    if (priceRangeSelected === "All") return true;
-
-    const price = parseInt(product.price);
-    if (priceRangeSelected === "$0-50") return price >= 0 && price <= 50;
-    if (priceRangeSelected === "$50-100") return price > 50 && price <= 100;
-    if (priceRangeSelected === "$100-200") return price > 100 && price <= 200;
-    if (priceRangeSelected === "$200+") return price > 200;
-  });
-
   return (
     <div className="relative">
       <h1 className="text-3xl font-bold mb-4">Products</h1>
@@ -119,7 +55,7 @@ const ProductEditDelete = () => {
             className="bg-gray-100 rounded-full px-4 py-2 font-semibold"
             onClick={() => setPriceOpen(!priceOpen)}
           >
-            {priceRangeSelected === "All" ? "Price " : priceRangeSelected}{" "}
+            {priceRangeSelected === "All" ? "Price " : priceRangeSelected}
             <HiChevronDown
               className={`w-4 h-4 inline transition-transform ${
                 priceOpen ? "rotate-180" : ""
@@ -148,7 +84,6 @@ const ProductEditDelete = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>Id</th>
               <th>Product Name</th>
               <th>Image</th>
               <th>Category</th>
@@ -158,13 +93,13 @@ const ProductEditDelete = () => {
           </thead>
           <tbody>
             {filteredProducts && filteredProducts.length > 0 ? (
-              filteredProducts.map((product, index) => (
+              filteredProducts.map((product) => (
                 <tr key={product.id}>
-                  <th>{index + 1}</th>
                   <td>{product.name}</td>
                   <td>
                     <img
                       className="w-10 h-10 rounded-full object-cover"
+                      loading="lazy"
                       src={product.image}
                       alt={product.name}
                     />
@@ -176,13 +111,10 @@ const ProductEditDelete = () => {
                       <button
                         onClick={() =>
                           navigate(
-                            `/Products/${
-                              product.category
-                                ? product.category.toLowerCase()
-                                : "all"
-                            }/${product.name.replace(/\s+/g, "-")}-${
-                              product.id
-                            }/edit`
+                            `/admin/products/${product.name.replace(
+                              /\s+/g,
+                              "-"
+                            )}-${product.id}/edit`
                           )
                         }
                         className="hover:underline cursor-pointer"
@@ -212,5 +144,4 @@ const ProductEditDelete = () => {
       </div>
     </div>
   );
-};
-export default ProductEditDelete;
+}
