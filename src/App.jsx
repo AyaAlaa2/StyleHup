@@ -21,6 +21,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Edit from "./components/admin/products/Edit";
 import  Customer  from "./components/admin/Customer/Customer";
 import CustomerDetalis from "./components/admin/Customer/CustomerDetalis";
+import AdminErrorPage from "./components/admin/ErrorPage";
 const App = () => {
   return (
     <>
@@ -66,7 +67,7 @@ const App = () => {
           <Route path="analytics" element={<Dashboard />} />
         </Route>
 
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<AdminErrorPage />} />
       </Routes>
     </>
   );
