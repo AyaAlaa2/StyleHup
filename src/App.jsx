@@ -44,6 +44,8 @@ const App = () => {
           <Route path="/aboutUs" element={<About />} />
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/signin" element={<SignPage />} />
+
+          <Route path="*" element={<ErrorPage />} />
         </Route>
 
         <Route
@@ -65,9 +67,9 @@ const App = () => {
           <Route path="customers/:customerName" element={<CustomerDetalis />} />
 
           <Route path="analytics" element={<Dashboard />} />
-        </Route>
 
-        <Route path="*" element={<AdminErrorPage />} />
+          <Route path="*" element={<AdminErrorPage />} />
+        </Route>
       </Routes>
     </>
   );

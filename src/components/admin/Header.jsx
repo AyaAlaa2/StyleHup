@@ -5,10 +5,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { RiNotification2Line } from "react-icons/ri";
 import { RiDashboardFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
-import SearchBar from "../SearchBar";
+
 import { logout } from "../reducers/loggedReducer";
 import { menuItems } from "./AdminSlideItem";
-import { motion } from "motion/react";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,8 +35,9 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-3 md:gap-[32px]">
-        <SearchBar />
+       
 
+       
         <div className="flex gap-[6px] md:gap-[8px] items-center">
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
             <Link to="/admin/notification">
