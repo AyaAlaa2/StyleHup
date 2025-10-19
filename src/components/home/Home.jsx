@@ -11,6 +11,7 @@ const Home = () => {
   const [blogProduct, setBlogProduct] = useState([]);
 
   const fetchProduct = useCallback(() => {
+    if (!product) return;
     const newArrivalProduct = product
       .sort(() => 0.5 - Math.random())
       .slice(0, 4);
