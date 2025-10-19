@@ -23,6 +23,7 @@ import CheckoutPage from "./components/checkOut/checkoutPage";
 import Order from "./components/admin/order/Order";
 import Customer from "./components/admin/customer/Customer";
 import CustomerDetailes from "./components/admin/customer/CustomerDetailes";
+import AdminErrorPage from "./components/admin/AdminErrorPage";
 
 const App = () => {
   return (
@@ -69,6 +70,7 @@ const App = () => {
             <Route path=":customerName" element={<CustomerDetailes />} />
           </Route>
           <Route path="analytics" element={<Dashboard />} />
+          <Route path="*" element={<AdminErrorPage />} />
         </Route>
 
         <Route path="*" element={<ErrorPage />} />
