@@ -3,6 +3,7 @@ import { useProducts } from "../../hooks/useProducts";
 import Deletep from "../../hooks/deleteProduct";
 import Swal from "sweetalert2";
 import ProductTable from "./ProductTable";
+import toast from "react-hot-toast";
 
 const ProductEditDelete = () => {
   const { data: products, isLoading, isError } = useProducts();
@@ -26,13 +27,7 @@ const ProductEditDelete = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         Delete.mutate(id);
-        Swal.fire({
-          title: "Deleted!",
-          text: "Product has been deleted.",
-          icon: "success",
-          timer: 1500,
-          showConfirmButton: false,
-        });
+        toast.success("itProduct deleted successfully");
       }
     });
   };

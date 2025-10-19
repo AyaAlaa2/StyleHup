@@ -69,20 +69,23 @@ export default function EditForm({
         </div>
 
         <div className="flex flex-col">
-          <label className="text-lg font-medium mb-1">Image</label>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageChange}
-            className="border border-gray-400 rounded-md px-4 py-2 bg-white"
-          />
+          <h1 className="text-lg font-medium mb-1">Product Image</h1>
           {preview && (
             <img
               src={preview}
               alt="Preview"
-              className="w-40 h-40 md:w-80 md:h-80 object-cover rounded-md mt-3 "
+              className="w-40 h-40 md:w-80 md:h-80 object-cover rounded-md mt-3 mb-3 "
             />
           )}
+          <label className="btn cursor-pointer bg-[#F0F2F5] font-bold text-[14px] leading-[21px] w-1/3">
+            Update Image
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="hidden"
+            />
+          </label>
         </div>
 
         <div className="flex justify-start gap-3 pt-4">
