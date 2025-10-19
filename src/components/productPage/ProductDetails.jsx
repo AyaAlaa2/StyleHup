@@ -35,7 +35,7 @@ const ProductDetails = ({ product }) => {
         <div className="border-t col-span-3 border-[#E5E8EB] py-[20px] flex flex-col justify-center items-start">
           <p className="text-[14px] font-normal text-[#757575]">Material</p>
           <p className="text-[14px] font-normal text-[#141414]">
-            {product.material}
+            {product.material}x
           </p>
         </div>
         <div className="border-t border-[#E5E8EB] py-[20px] flex flex-col justify-center items-start">

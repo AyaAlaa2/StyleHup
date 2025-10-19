@@ -19,6 +19,8 @@ import ProtectedAdminRoute from "./components/admin/ProtectedAdminRoute";
 import Dashboard from "./components/admin/dashboard/Dashboard";
 import ScrollToTop from "./components/ScrollToTop";
 import Edit from "./components/admin/products/Edit";
+import CheckoutPage from "./components/checkOut/checkoutPage";
+import Order from "./components/admin/order/Order";
 
 const App = () => {
   return (
@@ -39,6 +41,7 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/wishList" element={<WishList />} />
           <Route path="/cart" element={<Card />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/aboutUs" element={<About />} />
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/signin" element={<SignPage />} />
@@ -58,7 +61,7 @@ const App = () => {
             <Route index element={<ProductsPage />} />
             <Route path=":itemPage/edit" element={<Edit />} />
           </Route>
-          <Route path="orders" element={<Dashboard />} />
+          <Route path="orders" element={<Order />} />
           <Route path="customers" element={<Dashboard />} />
           <Route path="analytics" element={<Dashboard />} />
         </Route>

@@ -5,11 +5,20 @@ import HeaderLinks from "./HeaderLinks";
 import toast from "react-hot-toast";
 import { auth, db } from "../firebase/firebase";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Cart = () => {
+  const [user, setUser] = useState(null);
   const [cartFirebase, setCartFirebase] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const user = auth.currentUser;
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const fetchCartFromFirebase = useCallback(async () => {
     try {
@@ -35,8 +44,12 @@ const Cart = () => {
   }, [user]);
 
   useEffect(() => {
-    fetchCartFromFirebase();
-  }, [fetchCartFromFirebase]);
+    if (user) {
+      fetchCartFromFirebase();
+    } else {
+      setCartFirebase([]);
+    }
+  }, [user, fetchCartFromFirebase]);
 
   const updateCartInFirebase = useCallback(
     async (updatedCart) => {
@@ -168,7 +181,12 @@ const Cart = () => {
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
       />
-      <Order total={total} subTotal={subTotal} estimatedTax={estimatedTax} />
+      <Order
+        cartFirebase={cartFirebase}
+        total={total}
+        subTotal={subTotal}
+        estimatedTax={estimatedTax}
+      />
     </div>
   );
 };

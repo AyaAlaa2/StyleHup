@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Order = ({ total, subTotal, estimatedTax }) => {
-  
-
+const Order = ({ cartFirebase, total, subTotal, estimatedTax }) => {
+  const navigate = useNavigate();
+  const handleCheckout = () => {
+    navigate("/checkout", {
+      state: { cartFirebase, total },
+    });
+  };
   return (
     <div>
       <div className="p-[16px]">
@@ -38,7 +43,10 @@ const Order = ({ total, subTotal, estimatedTax }) => {
       </div>
 
       <div className="py-[12px] px-[16px]">
-        <button className="px-[20px] h-[48px] rounded-lg bg-black text-white w-full md:w-[480px] text-[16px] font-bold leading-[24px]">
+        <button
+          className="px-[20px] h-[48px] rounded-lg bg-black text-white w-full md:w-[480px] text-[16px] font-bold leading-[24px]"
+          onClick={handleCheckout}
+        >
           Proceed to Checkout
         </button>
       </div>
