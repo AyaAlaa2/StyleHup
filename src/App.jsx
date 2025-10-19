@@ -21,6 +21,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Edit from "./components/admin/products/Edit";
 import CheckoutPage from "./components/checkOut/checkoutPage";
 import Order from "./components/admin/order/Order";
+import Customer from "./components/admin/customer/Customer";
+import CustomerDetailes from "./components/admin/customer/CustomerDetailes";
 
 const App = () => {
   return (
@@ -62,7 +64,10 @@ const App = () => {
             <Route path=":itemPage/edit" element={<Edit />} />
           </Route>
           <Route path="orders" element={<Order />} />
-          <Route path="customers" element={<Dashboard />} />
+          <Route path="customers">
+            <Route index element={<Customer />} />
+            <Route path=":customerName" element={<CustomerDetailes />} />
+          </Route>
           <Route path="analytics" element={<Dashboard />} />
         </Route>
 
