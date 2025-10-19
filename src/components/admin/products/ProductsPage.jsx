@@ -27,7 +27,7 @@ const ProductEditDelete = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         Delete.mutate(id);
-        toast.success("itProduct deleted successfully");
+        toast.success("Product deleted successfully");
       }
     });
   };

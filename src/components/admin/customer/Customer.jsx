@@ -36,7 +36,7 @@ const Customer = () => {
                           }`
                         )
                       }
-                      className="hover:underline cursor-pointer"
+                      className="font-bold hover:underline cursor-pointer"
                     >
                       more details..
                     </button>
