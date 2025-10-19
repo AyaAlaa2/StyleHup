@@ -86,7 +86,7 @@ const Edit = () => {
   };
 
   const onSubmit = (values) => {
-    const updatedValues = { ...values, id, image: preview };
+    const updatedValues = { ...product, ...values, id, image: preview };
     editMutation.mutate(updatedValues, {
       onSuccess: () => {
         toast.success("Edited Successfully!");
