@@ -2,7 +2,6 @@ import { useProducts } from "../hooks/useProducts";
 import { Outlet, useParams } from "react-router-dom";
 import { useState, useEffect, useMemo } from "react";
 import ProductCard from "./ProductCard";
-import { Link } from "react-router-dom";
 import Pagination from "../Pagination.jsx";
 import ProductCat from "./ProductCat.jsx";
 

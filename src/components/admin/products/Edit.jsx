@@ -4,7 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import EditProduct from "../../hooks/EditProduct";
 import { useState, useEffect } from "react";
-import { useProduct } from "../../hooks/useProducts";
+import { useProduct } from "../../hooks/useProduct";
 import toast from "react-hot-toast";
 import EditForm from "./EditForm";
 

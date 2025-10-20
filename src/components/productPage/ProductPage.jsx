@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
-import { useProduct, useProductsReviews } from "../hooks/useProducts";
+import { useProduct } from "../hooks/useProduct";
+import { useProductsReviews } from "../hooks//useProductReview";
 import ProductImage from "./ProductImage";
 import ProductDetails from "./ProductDetails";
 import ProductReviews from "./ProductReviews";
