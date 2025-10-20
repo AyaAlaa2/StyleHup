@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import EditProduct from "../../hooks/EditProduct";
+import EditProduct from "../../hooks/editProduct";
 import { useState, useEffect } from "react";
 import { useProduct } from "../../hooks/useProduct";
 import toast from "react-hot-toast";
