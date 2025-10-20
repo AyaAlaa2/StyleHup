@@ -4,7 +4,7 @@ import AdminLayout from "./components/layout/AdminLayout";
 import SignPage from "./components/registerPages/SignPage";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/about/About";
-import ContactUs from "./components/contactUs/ContactUs";
+import ContactUs from "./components/ContactUs/ContactUs";
 import Products from "./components/products/Products";
 import ProductsPage from "./components/admin/products/ProductsPage";
 import ProductPage from "./components/productPage/ProductPage";
