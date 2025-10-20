@@ -19,7 +19,7 @@ import ProtectedAdminRoute from "./components/admin/ProtectedAdminRoute";
 import Dashboard from "./components/admin/dashboard/Dashboard";
 import ScrollToTop from "./components/ScrollToTop";
 import Edit from "./components/admin/products/Edit";
-import CheckoutPage from "./components/checkout/checkoutPage";
+import CheckoutPage from "./components/checkout/CheckoutPage";
 import Order from "./components/admin/order/Order";
 import Customer from "./components/admin/customer/Customer";
 import CustomerDetailes from "./components/admin/customer/CustomerDetailes";
