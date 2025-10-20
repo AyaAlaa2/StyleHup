@@ -9,8 +9,8 @@ The goal of this project is to create a fully functional and responsive online f
 
 ## Team Members
 
-- [Your Name]
-- [Your Teammate’s Name] _(Frontend Developer)_
+- [Aya Alaa](https://github.com/AyaAlaa2)
+- [ُEman Sabry](https://github.com/eman-sabry)
 
 ---
 
