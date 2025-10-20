@@ -331,15 +331,20 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
 
           <button
             disabled={loading}
-            className="w-full bg-black text-white py-2 rounded-md mt-4 hover:bg-black/80 cursor-pointer duration-500"
+            className={`w-full font-bold text-white py-2 rounded-md mt-4 duration-500
+    ${
+      loading
+        ? "bg-gray-400 cursor-not-allowed"
+        : "bg-black hover:bg-black/80 cursor-pointer"
+    }`}
           >
             {loading ? (
               <p>
-                <span>Checkup now </span>
+                <span>Pay now </span>
                 <span className="loading loading-dots loading-md"></span>
               </p>
             ) : (
-              "Checkup now"
+              "Pay now"
             )}
           </button>
         </form>

@@ -44,7 +44,7 @@ const Order = ({ cartFirebase, total, subTotal, estimatedTax }) => {
 
       <div className="py-[12px] px-[16px]">
         <button
-          className="px-[20px] h-[48px] rounded-lg bg-black text-white w-full md:w-[480px] text-[16px] font-bold leading-[24px]"
+          className="px-[20px] h-[48px] rounded-lg bg-black text-white w-full md:w-[480px] text-[16px] font-bold leading-[24px] cursor-pointer"
           onClick={handleCheckout}
         >
           Proceed to Checkout
