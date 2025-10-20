@@ -3,8 +3,8 @@ import "react-phone-input-2/lib/style.css";
 import { auth, db } from "../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-import CheckoutForm from "./checkoutForm";
-import CheckoutCart from "./checkoutCart";
+import CheckoutForm from "./CheckoutForm";
+import CheckoutCart from "./CheckoutCart";
 
 const CheckoutPage = () => {
   const [user, setUser] = useState(null);
