@@ -28,16 +28,15 @@ const Home = () => {
       .slice(0, 4);
 
     const blogProduct = product.sort(() => 0.5 - Math.random()).slice(0, 4);
-    return [newArrivalProduct, bestSellersProduct, curatedProduct, blogProduct];
-  }, [product]);
 
-  useEffect(() => {
-    const [newArrivalProduct, bestSellersProduct, curatedProduct, blogProduct] =
-      fetchProduct();
     setNewArrivalProduct(newArrivalProduct);
     setBestSellersProduct(bestSellersProduct);
     setCuratedProduct(curatedProduct);
     setBlogProduct(blogProduct);
+  }, [product]);
+
+  useEffect(() => {
+    fetchProduct();
   }, [fetchProduct]);
 
   if (isLoading)
