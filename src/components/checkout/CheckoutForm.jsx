@@ -39,7 +39,7 @@ const checkoutSchema = z.object({
   }),
 });
 
-const CheckoutForm = ({ total, user, setCartFirebase }) => {
+const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
   const [selectedCity, setSelectedCity] = useState(null);
@@ -287,7 +287,10 @@ const CheckoutForm = ({ total, user, setCartFirebase }) => {
                       type="radio"
                       value="pickup"
                       checked={field.value === "pickup"}
-                      onChange={() => field.onChange("pickup")}
+                      onChange={() => {
+                        field.onChange("pickup");
+                        setShippingMethod("pickup");
+                      }}
                       className="radio"
                     />
                     <div>
@@ -303,7 +306,10 @@ const CheckoutForm = ({ total, user, setCartFirebase }) => {
                       type="radio"
                       value="express"
                       checked={field.value === "express"}
-                      onChange={() => field.onChange("express")}
+                      onChange={() => {
+                        field.onChange("express");
+                        setShippingMethod("express");
+                      }}
                       className="radio"
                     />
                     <div>

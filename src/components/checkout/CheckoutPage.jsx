@@ -10,6 +10,7 @@ const CheckoutPage = () => {
   const [user, setUser] = useState(null);
   const [cartFirebase, setCartFirebase] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [shippingMethod, setShippingMethod] = useState("pickup");
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
@@ -43,8 +44,9 @@ const CheckoutPage = () => {
       0
     );
     const tax = subTotal > 0 ? 15 : 0;
-    return subTotal + tax;
-  }, [cartFirebase]);
+    const shippingCost = shippingMethod === "express" ? 10 : 0;
+    return subTotal + tax + shippingCost;
+  }, [cartFirebase, shippingMethod]);
 
   return (
     <div className="flex items-start justify-start gap-8 p-4">
@@ -53,6 +55,8 @@ const CheckoutPage = () => {
         user={user}
         cartFirebase={cartFirebase}
         setCartFirebase={setCartFirebase}
+        shippingMethod={shippingMethod}
+        setShippingMethod={setShippingMethod}
       />
       <CheckoutCart
         loading={loading}
