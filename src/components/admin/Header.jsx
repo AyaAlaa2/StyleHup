@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiNotification2Line } from "react-icons/ri";
 import { RiDashboardFill } from "react-icons/ri";
@@ -8,15 +8,38 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../reducers/loggedReducer";
 import { menuItems } from "./AdminSlideItem";
 import { motion } from "motion/react";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
+import { persistor } from "../store/store";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebase";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("Dashboard");
   const selector = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    dispatch(logout());
+    Swal.fire({
+      title: "You are about to log out",
+      text: "Are you sure you want to proceed?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#000",
+      cancelButtonColor: "#c1c1c1ff",
+      confirmButtonText: "Log out",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(logout());
+        persistor.purge();
+        signOut(auth);
+        navigate("/signin");
+        toast.success("Logged out successfully!");
+      }
+    });
   };
 
   return (
@@ -34,7 +57,6 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-3 md:gap-[32px]">
-
         <div className="flex gap-[6px] md:gap-[8px] items-center">
           <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
             <Link to="/admin/notification">

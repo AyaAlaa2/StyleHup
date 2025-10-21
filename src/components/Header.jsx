@@ -11,6 +11,8 @@ import { logout } from "./reducers/loggedReducer";
 import { persistor } from "../components/store/store";
 import { signOut } from "firebase/auth";
 import { auth } from "../components/firebase/firebase";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,10 +29,24 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    dispatch(logout());
-    persistor.purge();
-    signOut(auth);
-    navigate("/signin");
+    Swal.fire({
+      title: "You are about to log out",
+      text: "Are you sure you want to proceed?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#000",
+      cancelButtonColor: "#c1c1c1ff",
+      confirmButtonText: "Log out",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(logout());
+        persistor.purge();
+        signOut(auth);
+        navigate("/signin");
+        toast.success("Logged out successfully!");
+      }
+    });
   };
 
   if (location.pathname === "/signin") {
