@@ -13,8 +13,10 @@ import { signOut } from "firebase/auth";
 import { auth } from "../components/firebase/firebase";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
+import { useCartAndWishlist } from "./hooks/useCartAndWishlist";
 
 const Header = () => {
+  const { cartCount } = useCartAndWishlist();
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const shopLink = ["All", "Men", "Women", "Kids", "Accessories"];
@@ -123,9 +125,14 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
+          <div className="relative bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
             <Link to="/cart">
               <PiShoppingBagThin className="text-[18px] md:text-[20px] text-[#141414]" />
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
             </Link>
           </div>
           <div>

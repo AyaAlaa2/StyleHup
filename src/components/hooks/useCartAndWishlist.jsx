@@ -1,18 +1,42 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { auth, db } from "../firebase/firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc, onSnapshot } from "firebase/firestore";
 import { addToWishlist } from "../reducers/wishListReducer";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 export const useCartAndWishlist = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const selector = useSelector((state) => state.user);
+  const [cartCount, setCartCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState("");
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const selector = useSelector((state) => state.user);
+
+  useEffect(() => {
+    const unsubscribeAuth = auth.onAuthStateChanged((currentUser) => {
+      if (!currentUser) {
+        setCartCount(0);
+        return;
+      }
+
+      const userRef = doc(db, "users", currentUser.uid);
+      const unsubscribe = onSnapshot(userRef, (snapshot) => {
+        const data = snapshot.data();
+        const cart = data?.cart || [];
+        setCartCount(
+          cart.reduce((total, item) => total + (item.quantity || 1), 0)
+        );
+      });
+
+      return () => unsubscribe();
+    });
+
+    return () => unsubscribeAuth();
+  }, []);
 
   const requireLogin = useCallback(() => {
     if (!selector.logged) {
@@ -85,6 +109,7 @@ export const useCartAndWishlist = () => {
     isOpen,
     setIsOpen,
     selectedSize,
-    setSelectedSize
+    setSelectedSize,
+    cartCount,
   };
 };
