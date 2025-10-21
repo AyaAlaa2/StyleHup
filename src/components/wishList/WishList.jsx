@@ -26,18 +26,15 @@ export default function Wishlist() {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-6">Wishlist Items</h2>
-      <div className="min-h-[30vh]">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 min-h-[30vh]">
         {currentProducts.length === 0 ? (
-          <p className="text-gray-600 text-center">
+          <p className="col-span-full text-center text-gray-500">
             No products in your wishlist.
           </p>
         ) : (
-          <div>
-            <WishlistCard
-              currentProducts={currentProducts}
-              handleDelete={handleDelete}
-            />
-          </div>
+          currentProducts.map((p) => (
+            <WishlistCard key={p.id} product={p} handleDelete={handleDelete} />
+          ))
         )}
       </div>
 

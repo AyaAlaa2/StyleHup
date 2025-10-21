@@ -17,9 +17,9 @@ const ProductCard = ({ product, categoryName }) => {
 
   return (
     <div>
-      <div className="group relative block overflow-hidden">
+      <div className="group relative block overflow-hidden border border-gray-100 pb-3">
         <button
-          onClick={addProductToWishlist}
+          onClick={() => addProductToWishlist(product)}
           className="absolute end-2 top-2 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
         >
           <span className="sr-only">Wishlist</span>
@@ -49,7 +49,7 @@ const ProductCard = ({ product, categoryName }) => {
             loading="lazy"
             className="w-full aspect-square object-cover transition duration-500 group-hover:scale-105"
           />
-          <div className="relative border border-gray-100 bg-white p-4">
+          <div className="relative bg-white p-4">
             <h3 className="mt-2 text-sm font-medium text-gray-900 truncate">
               {product.name}
             </h3>
@@ -61,14 +61,15 @@ const ProductCard = ({ product, categoryName }) => {
             </h1>
           </div>
         </Link>
+        <div className="px-3">
+          <button
+            className="mt-3 block w-full rounded-sm !bg-black p-2 text-sm text-white cursor-pointer font-medium transition hover:scale-105 duration-500"
+            onClick={() => requireLogin(() => setIsOpen(true))}
+          >
+            Add to Cart
+          </button>
+        </div>
       </div>
-
-      <button
-        className="mt-3 block w-full rounded-sm !bg-black p-2 text-sm text-white cursor-pointer font-medium transition hover:scale-105 duration-500"
-        onClick={() => requireLogin(() => setIsOpen(true))}
-      >
-        Add to Cart
-      </button>
 
       {isOpen && (
         <ModalSelectSize
