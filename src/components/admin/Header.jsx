@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiNotification2Line } from "react-icons/ri";
@@ -13,6 +13,7 @@ import toast from "react-hot-toast";
 import { persistor } from "../store/store";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase";
+import { useOrder } from "../hooks/useOrder";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +21,27 @@ const Header = () => {
   const selector = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { data: orders, isLoading } = useOrder();
+  const [notifications, setNotifications] = useState([]);
+  const prevOrdersCount = useRef(0);
+
+  useEffect(() => {
+    if (!isLoading && orders) {
+      if (orders.length > prevOrdersCount.current) {
+        const newOrders = orders.slice(prevOrdersCount.current);
+        const newNotifications = newOrders.map((order) => ({
+          id: order.id,
+          text: `New order received: ${order.firstName} ${order.lastName}`,
+          time: "Just now",
+        }));
+
+        setNotifications((prev) => [...newNotifications, ...prev]);
+        prevOrdersCount.current = orders.length;
+      } else {
+        prevOrdersCount.current = orders.length;
+      }
+    }
+  }, [orders, isLoading]);
 
   const handleLogout = () => {
     Swal.fire({
@@ -58,10 +80,40 @@ const Header = () => {
 
       <div className="flex items-center gap-3 md:gap-[32px]">
         <div className="flex gap-[6px] md:gap-[8px] items-center">
-          <div className="bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]">
-            <Link to="/admin/notification">
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost avatar bg-[#F2F2F2] rounded-lg p-[8px] md:p-[10px]"
+            >
               <RiNotification2Line className="text-[18px] md:text-[20px] text-[#141414]" />
-            </Link>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-80 p-2 shadow"
+            >
+              {notifications && notifications.length > 0 ? (
+                notifications.map((noti, index) => (
+                  <li
+                    className={`p-1 ${
+                      index === notifications.length - 1
+                        ? ""
+                        : "border-b-1 border-gray-200 rounded-lg "
+                    }`}
+                    key={index}
+                  >
+                    <div className="flex flex-col gap-[8px] justify-start items-start">
+                      <p>{noti.text}</p>
+                      <p className="text-gray-400">{noti.time}</p>
+                    </div>
+                  </li>
+                ))
+              ) : (
+                <p className="px-3 py-3 text-gray-400 text-center">
+                  There is no new Notification
+                </p>
+              )}
+            </ul>
           </div>
 
           <div className="dropdown dropdown-end">
