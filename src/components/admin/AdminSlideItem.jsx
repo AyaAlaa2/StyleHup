@@ -33,10 +33,4 @@ export const menuItems = [
     selectedIcon: <FaUserGroup size={24} />,
     path: "/admin/customers",
   },
-  {
-    name: "Analytics",
-    icon: <LuChartSpline size={24} />,
-    selectedIcon: <AiOutlineAreaChart size={24} />,
-    path: "/admin/analytics",
-  },
 ];

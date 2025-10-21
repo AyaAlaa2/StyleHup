@@ -115,7 +115,7 @@ const AddProduct = () => {
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label
             htmlFor="productName"
             className="block text-[16px] font-medium leading-[24px] text-[#121417]"
@@ -136,7 +136,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label
             htmlFor="price"
             className="block text-[16px] font-medium leading-[24px] text-[#121417]"
@@ -155,7 +155,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="form-control flex gap-[8px] px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="form-control flex gap-[8px] px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label
             htmlFor="category"
             className="block text-[16px] font-medium leading-[24px] text-[#121417]"
@@ -184,7 +184,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label className="block text-[16px] font-medium leading-[24px] text-[#121417]">
             Sizes
           </label>
@@ -205,7 +205,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label className="block text-[16px] font-medium leading-[24px] text-[#121417]">
             Material
           </label>
@@ -222,7 +222,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label className="block text-[16px] font-medium leading-[24px] text-[#121417]">
             Colors (comma separated)
           </label>
@@ -243,7 +243,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label className="block text-[16px] font-medium leading-[24px] text-[#121417]">
             Care Instructions
           </label>
@@ -260,7 +260,7 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-1/2">
+        <div className="px-[16px] py-[12px] flex flex-col gap-[16px] w-full lg:w-1/2">
           <label
             htmlFor="description"
             className="block text-[16px] font-medium leading-[24px] text-[#121417]"

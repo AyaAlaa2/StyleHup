@@ -69,7 +69,6 @@ const App = () => {
             <Route index element={<Customer />} />
             <Route path=":customerName" element={<CustomerDetailes />} />
           </Route>
-          <Route path="analytics" element={<Dashboard />} />
           <Route path="*" element={<AdminErrorPage />} />
         </Route>
 

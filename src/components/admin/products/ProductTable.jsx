@@ -80,7 +80,7 @@ export default function ProductTable({
         </div>
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto rounded-xl border border-[#DBE0E5] overflow-hidden">
         <table className="table">
           <thead>
             <tr>
