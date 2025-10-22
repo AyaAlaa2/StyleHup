@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import EditProduct from "../../hooks/editProduct";
+import {useEditProduct} from "../../hooks/editProduct";
 import { useState, useEffect } from "react";
 import { useProduct } from "../../hooks/useProduct";
 import toast from "react-hot-toast";
@@ -13,7 +13,7 @@ const Edit = () => {
   const { itemPage } = useParams();
   const id = Number(itemPage.split("-").pop());
 
-  const editMutation = EditProduct();
+  const editMutation = useEditProduct();
   const { data: product, isLoading, isError } = useProduct(id);
 
   const [preview, setPreview] = useState("");

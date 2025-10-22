@@ -5,7 +5,6 @@ import BlogCat from "./BlogCat.jsx";
 import Pagination from "../Pagination.jsx";
 
 const Blog = () => {
-  //Fetch Articles
   const categories = ["All", "Fashion", "Lifestyle", "Trends", "Reviews"];
   const { data: Articles, isLoading, isError, error } = useBlog();
   const [categoryName, setCategoryName] = useState("All");

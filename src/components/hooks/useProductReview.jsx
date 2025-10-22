@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const fetchProductsReviews = async () => {
-  const res = await axios.get("http://localhost:3000/products_reviews");
-  return res.data;
+  const res = await axios.get("https://api.jsonbin.io/v3/b/68f8d3e3d0ea881f40b3218c/latest");
+  return res.data.record.products_reviews;
 };
 
-export function useProductsReviews() {
+export function useProducts() {
   return useQuery({
     queryKey: ["productsReviews"],
     queryFn: fetchProductsReviews,

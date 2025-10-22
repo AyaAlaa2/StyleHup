@@ -1,9 +1,30 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
+const BIN_ID = "68f8b24043b1c97be977f072";
+const MASTER_KEY = "$2a$10$9v3g5dfZQRcse0C30wx2N.K1xzs.X/v.JGWDo3fQwMDAiGegOEICm";
+
 const addNewProduct = async (newProduct) => {
-  const res = await axios.post("http://localhost:3000/Products", newProduct);
-  return res.data;
+  const res = await axios.get(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+    headers: {
+      "X-Master-Key": MASTER_KEY,
+    },
+  });
+
+  const products = res.data.record.Products;
+  const updatedProducts = [...products, newProduct];
+  const updateRes = await axios.put(
+    `https://api.jsonbin.io/v3/b/${BIN_ID}`,
+    { Products: updatedProducts },
+    {
+      headers: {
+        "Content-Type": "application/json",
+        "X-Master-Key": MASTER_KEY,
+      },
+    }
+  );
+
+  return updateRes.data;
 };
 
 export function useAddProduct() {
@@ -19,3 +40,4 @@ export function useAddProduct() {
     },
   });
 }
+

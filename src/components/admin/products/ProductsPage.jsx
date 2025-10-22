@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useProducts } from "../../hooks/useProducts";
-import Deletep from "../../hooks/deleteProduct";
+import {useDeleteProduct} from "../../hooks/deleteProduct";
+import { useQueryClient } from "@tanstack/react-query";
 import Swal from "sweetalert2";
 import ProductTable from "./ProductTable";
 import toast from "react-hot-toast";
 
 const ProductEditDelete = () => {
+  const queryClient = useQueryClient();
   const { data: products, isLoading, isError } = useProducts();
   const [categorySelected, setCategorySelected] = useState("All");
   const [catOpen, setCatOpen] = useState(false);
@@ -13,24 +15,31 @@ const ProductEditDelete = () => {
   const [priceOpen, setPriceOpen] = useState(false);
   const Categorys = ["All", "Men", "Women", "Kids", "Accessories"];
   const PriceRanges = ["All", "$0-50", "$50-100", "$100-200", "$200+"];
-  const Delete = Deletep();
-  const handelDelete = (id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to undo this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#d33",
-      cancelButtonColor: "#3085d6",
-      confirmButtonText: "Yes, delete it!",
-      cancelButtonText: "Cancel",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Delete.mutate(id);
-        toast.success("Product deleted successfully");
-      }
-    });
-  };
+  const Delete = useDeleteProduct();
+const handelDelete = (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to undo this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Yes, delete it!",
+    cancelButtonText: "Cancel",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Delete.mutate(id, {
+        onSuccess: () => {
+          queryClient.setQueryData(["Products"], (old) =>
+            old.filter((product) => product.id !== id)
+          );
+          toast.success("Product deleted successfully");
+        },
+      });
+    }
+  });
+};
+
   const handleCategoryChange = (category) => {
     setCategorySelected(category);
     setCatOpen(false);
