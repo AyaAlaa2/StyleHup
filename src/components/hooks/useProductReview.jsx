@@ -6,7 +6,7 @@ const fetchProductsReviews = async () => {
   return res.data.record.products_reviews;
 };
 
-export function useProducts() {
+export function useProductsReviews() {
   return useQuery({
     queryKey: ["productsReviews"],
     queryFn: fetchProductsReviews,

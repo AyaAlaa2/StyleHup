@@ -6,7 +6,7 @@ const fetchOrder = async () => {
   return res.data.record.order;
 };
 
-export function useProducts() {
+export function useOrder() {
   return useQuery({
     queryKey: ["order"],
     queryFn: fetchOrder,
