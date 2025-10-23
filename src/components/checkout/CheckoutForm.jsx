@@ -132,12 +132,12 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
   });
 
   return (
-    <div className="max-w-3xl mx-auto shadow-md rounded-2xl p-6 bg-gray-100">
+    <div className="w-full lg:w-[70%] max-w-3xl mx-auto shadow-md rounded-2xl p-6 bg-gray-100">
       <h2 className="text-2xl font-semibold mb-4">Shopping Address</h2>
       <div className="flex gap-[16px]">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          <div className="flex gap-[16px]">
-            <div className="w-1/2 flex flex-col gap-[8px]">
+          <div className="flex flex-col md:flex-row gap-[16px] ">
+            <div className="w-full md:w-1/2 flex flex-col gap-[8px]">
               <label htmlFor="fname" className="block text-sm font-medium">
                 First Name
               </label>
@@ -146,14 +146,14 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
                 type="text"
                 name="fname"
                 {...register("fname")}
-                className="input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none"
+                className="input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none w-full"
               />
               {errors.fname && (
                 <p className="text-sm text-red-500">{errors.fname.message}</p>
               )}
             </div>
 
-            <div className="w-1/2 flex flex-col gap-[8px]">
+            <div className="w-full md:w-1/2 flex flex-col gap-[8px]">
               <label htmlFor="lname" className="block text-sm font-medium">
                 Last Name
               </label>
@@ -162,7 +162,7 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
                 type="text"
                 name="lname"
                 {...register("lname")}
-                className="input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none"
+                className="input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none w-full"
               />
               {errors.lname && (
                 <p className="text-sm text-red-500">{errors.lname.message}</p>
@@ -170,8 +170,8 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
             </div>
           </div>
 
-          <div className="flex gap-[16px]">
-            <div className="w-1/2 flex flex-col gap-[8px]">
+          <div className="flex flex-col md:flex-row gap-[16px]">
+            <div className="w-full md:w-1/2 flex flex-col gap-[8px]">
               <label htmlFor="email" className="block text-sm font-medium">
                 Email
               </label>
@@ -180,14 +180,14 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
                 type="email"
                 name="email"
                 {...register("email")}
-                className="input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none"
+                className="input input-bordered border-[#E5E8EB] focus:outline-none focus:border-none w-full"
               />
               {errors.email && (
                 <p className="text-sm text-red-500">{errors.email.message}</p>
               )}
             </div>
 
-            <div className="w-1/2 flex flex-col gap-[8px]">
+            <div className="w-full md:w-1/2 flex flex-col gap-[8px]">
               <label className="block text-sm font-medium">Phone</label>
               <Controller
                 control={control}
@@ -197,7 +197,7 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
                     country={selectedCountry?.value?.toLowerCase() || "sa"}
                     value={field.value}
                     onChange={field.onChange}
-                    inputClass="!w-[93%] !text-[16px] !h-[40px]"
+                    inputClass="!w-full !text-[16px] !h-[40px] "
                   />
                 )}
               />
@@ -207,8 +207,8 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
             </div>
           </div>
 
-          <div className="flex gap-[16px]">
-            <div className="w-1/3 flex flex-col gap-[8px]">
+          <div className="flex flex-col md:flex-row gap-[16px]">
+            <div className="w-full md:w-1/3 flex flex-col gap-[8px]">
               <label className="block text-sm font-medium">Country</label>
               <Controller
                 control={control}
@@ -231,7 +231,7 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
               )}
             </div>
 
-            <div className="w-1/3 flex flex-col gap-[8px]">
+            <div className="w-full md:w-1/3 flex flex-col gap-[8px]">
               <label className="block text-sm font-medium">State</label>
               <Controller
                 control={control}
@@ -253,7 +253,7 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
               )}
             </div>
 
-            <div className="w-1/3 flex flex-col gap-[8px]">
+            <div className="w-full md:w-1/3 flex flex-col gap-[8px]">
               <label className="block text-sm font-medium">City</label>
               <Controller
                 control={control}
@@ -281,8 +281,8 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
               control={control}
               name="shoppingMethod"
               render={({ field }) => (
-                <div className="space-x-3 flex">
-                  <label className="w-1/2 flex items-center gap-3 border border-[#E5E8EB] p-5 rounded-lg cursor-pointer hover:bg-gray-50">
+                <div className="gap-[8px] flex flex-col md:flex-row">
+                  <label className="w-full md:w-1/2 flex items-center gap-3 border border-[#E5E8EB] p-5 rounded-lg cursor-pointer hover:bg-gray-50">
                     <input
                       type="radio"
                       value="pickup"
@@ -301,7 +301,7 @@ const CheckoutForm = ({ total, user, setCartFirebase, setShippingMethod }) => {
                     </div>
                   </label>
 
-                  <label className="w-1/2 flex items-center gap-3 border border-[#E5E8EB] p-5 rounded-lg cursor-pointer hover:bg-gray-50">
+                  <label className="w-full md:w-1/2 w-1/2 flex items-center gap-3 border border-[#E5E8EB] p-5 rounded-lg cursor-pointer hover:bg-gray-50">
                     <input
                       type="radio"
                       value="express"

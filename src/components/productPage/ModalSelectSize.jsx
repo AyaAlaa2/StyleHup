@@ -9,7 +9,7 @@ const ModalSelectSize = ({
   loading,
 }) => {
   return (
-    <dialog open className="modal modal-bottom sm:modal-middle">
+    <dialog open className="modal modal-middle">
       <div className="modal-box">
         <h3 className="font-bold text-lg">{product.name}</h3>
         <img

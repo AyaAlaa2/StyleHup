@@ -33,7 +33,7 @@ const CheckoutCart = ({
     );
 
   return (
-    <div className="flex flex-col w-[30%]">
+    <div className="flex flex-col hidden lg:block w-[30%]">
       <h2 className="text-2xl font-semibold mb-4">Your Cart</h2>
 
       <div className="flex flex-col gap-[16px] justify-start w-full items-center min-h-[200px]">

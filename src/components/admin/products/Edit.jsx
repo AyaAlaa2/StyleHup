@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {useEditProduct} from "../../hooks/editProduct";
+import { useEditProduct } from "../../hooks/editProduct";
 import { useState, useEffect } from "react";
 import { useProduct } from "../../hooks/useProduct";
 import toast from "react-hot-toast";
@@ -10,6 +10,7 @@ import EditForm from "./EditForm";
 
 const Edit = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const { itemPage } = useParams();
   const id = Number(itemPage.split("-").pop());
 
@@ -86,6 +87,7 @@ const Edit = () => {
   };
 
   const onSubmit = (values) => {
+    setLoading(true);
     const updatedValues = { ...product, ...values, id, image: preview };
     editMutation.mutate(updatedValues, {
       onSuccess: () => {
@@ -96,6 +98,7 @@ const Edit = () => {
         toast.error("Edit Failed. Please try again.");
       },
     });
+    setLoading(false);
   };
 
   return (
@@ -107,6 +110,7 @@ const Edit = () => {
         onSubmit={onSubmit}
         register={register}
         errors={errors}
+        loading={loading}
       />
     </div>
   );

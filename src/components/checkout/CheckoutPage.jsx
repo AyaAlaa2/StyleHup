@@ -49,7 +49,7 @@ const CheckoutPage = () => {
   }, [cartFirebase, shippingMethod]);
 
   return (
-    <div className="flex items-start justify-start gap-8 p-4">
+    <div className="flex flex-row items-start justify-start gap-8 p-4">
       <CheckoutForm
         total={total}
         user={user}

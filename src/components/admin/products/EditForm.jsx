@@ -8,6 +8,7 @@ export default function EditForm({
   onSubmit,
   register,
   errors,
+  loading,
 }) {
   const navigate = useNavigate();
   return (
@@ -91,9 +92,22 @@ export default function EditForm({
         <div className="flex justify-start gap-3 pt-4">
           <button
             type="submit"
-            className="bg-black text-white px-6 py-2 rounded-md cursor-pointer hover:bg-gray-800"
+            disabled={loading}
+            className={`font-bold text-white px-6 py-2 rounded-md duration-500cursor-pointer hover:bg-gray-800
+    ${
+      loading
+        ? "bg-gray-400 cursor-not-allowed"
+        : "bg-black hover:bg-black/80 cursor-pointer"
+    }`}
           >
-            Save Changes
+            {loading ? (
+              <p>
+                <span>Save Changes </span>
+                <span className="loading loading-dots loading-md"></span>
+              </p>
+            ) : (
+              "Save Changes"
+            )}
           </button>
           <button
             type="button"

@@ -26,7 +26,7 @@ const HomeComponent = ({ title, products }) => {
         transition={{
           duration: 0.5,
         }}
-        className="ps-[16px] pt-[16px] grid grid-cols-2 lg:grid-cols-4 gap-[12px]"
+        className="ps-[16px] pt-[16px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[12px]"
       >
         {products.map((item, idx) => (
           <Link
