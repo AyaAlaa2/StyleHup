@@ -93,12 +93,13 @@ const Edit = () => {
       onSuccess: () => {
         toast.success("Edited Successfully!");
         navigate(-1);
+        setLoading(false);
       },
       onError: () => {
         toast.error("Edit Failed. Please try again.");
+        setLoading(false);
       },
     });
-    setLoading(false);
   };
 
   return (
