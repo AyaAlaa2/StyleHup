@@ -10,7 +10,7 @@ const Hero = () => {
           className="w-full h-full max-h-[90vh] object-cover object-center rounded-2xl transition-all duration-500"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a90] via-[#4b4b4b70] to-[#1a1a1a90] rounded-2xl flex flex-col justify-center items-center sm:items-start text-center sm:text-left px-6 sm:px-16 md:px-24 transition-all duration-300">
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(26,26,26,0.56)] via-[rgba(75,75,75,0.44)] to-[rgba(26,26,26,0.56)] rounded-2xl flex flex-col justify-center items-center sm:items-start text-center sm:text-left px-6 sm:px-16 md:px-24 transition-all duration-300">
           <div className="max-w-[650px]">
             <p className="text-white font-bold sm:font-extrabold text-[24px] sm:text-[42px] md:text-[50px] leading-[32px] sm:leading-[56px] md:leading-[64px] tracking-tight font-serif drop-shadow-lg">
               Step into Style
