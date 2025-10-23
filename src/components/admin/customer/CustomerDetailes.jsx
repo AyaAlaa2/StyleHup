@@ -25,7 +25,7 @@ const CustomerDetalis = () => {
         <div className="border-t border-[#E5E8EB] py-[20px] flex flex-col justify-center items-start">
           <p className="text-[14px] font-normal text-[#757575]">Name</p>
           <p className="text-[14px] font-normal text-[#141414]">
-            {customer.fisrtName} {customer.lastName}
+            {customer.firstName} {customer.lastName}
           </p>
         </div>
         <div className="border-t col-span-3 border-[#E5E8EB] py-[20px] flex flex-col justify-center items-start">
